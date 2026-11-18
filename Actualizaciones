@@ -1,0 +1,76 @@
+
+Día 8 - 18 nov
+*ajuste en la ventana de noticias
+*Notificaciones push personalizados
+*Foro:
+	a. hacer menciones
+	b. editar comentario
+
+
+
+Día 7 - 17 nov
+
+día 6/14 completados
+*Corrección del API de importar IG/FB
+*Corrección país en el formulario de editar noticia
+*Buzón de notificaciones (campana esquina superior derecha)
+*Foro: 
+	a. Reemplazo categoría Equipamiento por Tutoriales
+	b. reeorganizado las categorías
+	c. habilitado responder comentarios
+	d. fotos nuevas con el ajuste adecuado al darles zoom
+	e. la opción de marcar vendido en categoría venta.
+	f. colores por categoría
+
+
+Día 6 - 16 nov
+
+*Opción de importar noticia de Instagram y facebook.
+*Advertencia antes de borrar foto en galería
+*Importación de 108 entidades al direcotorio local y limpieza de caché de la nube.
+-Batch 3 al directorio de 46 clubes de FETEMBA, Buenos Aires, Argentina.
+-Batch 4 al directorio de 27 clubes de FECOTEME Cordoba, Argentina.
+-Batch 5 al directorio de 9 clubes de ASATEME Santa Fe, Argentina.
+-Batch 6 al directorio de 24 Asociaciones provinciales Argentina.
+
+Día 5 - 15 nov
+parte 1
+*Fecha de las publicaciones de las noticias nacionales
+*Fecha y hora de las publicaciones en el foro
+*Actualizaciones de google play
+*Audit log
+*Opción de compartir noticias
+*Opción de compartir eventos
+
+
+
+Día 4 - 14 nov
+*Integración idioma inglés (pendiente algunas mejoras)
+*Integración idioma Portuguese (pendiente algunas mejoras)
+*Menu desplegable con Perfil, Ajustes y Acerca de con todo su contenido.
+*Importación del batch 2 al directorio de 67 entidades.
+
+
+Día 3 - 13 nov
+*Bases de eventos. Aumento la cantidad de documentos y/o imágenes a 6.
+*Los roles Asociación no pasan por moderación para publicación de eventos.
+*Eliminación de las federaciones en Contacto y su acceso en el panel de moderación.
+*Creación directorio para Federaciones, Asociaciones y/o ligas provinciales, clues y academias.
+*Reemplazo en el HOME de los Últimos ganadores por los 2 próximos eventos.
+
+
+Día 2 - 12 nov
+*Botón en Contacto para notificar área de mejora o bug y su buzón.
+*Confirmar contraseña al registrarse.
+*Nuevos canales de transmisión en vivo
+*Función botón atrás
+*Cambios gestión de usuarios
+*Solicitud de cambio de roles. Jugador a Club o Asociación.
+*Solicitud de país con el registro con botón de google.
+
+Día 1 - 11 nov
+*Mensaje de advertencia antes de borrar una publicación.
+*Mensaje de advertencia antes de borrar una respuesta.
+*Búsqueda de país en el registro de formulario. Para el registro se busca con un dropdown. Para los demás formularios tomará primeramente de manera automática el país del usuario.
+*Buzón de moderador.
+*Video del inicio.
