@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soporte — Punto Para Campeonato (PPCTT)</title>
+  <link rel="icon" type="image/png" href="/logo.png" />
   <style>
     :root {
       --bg: #080d1a;
@@ -40,13 +41,12 @@
       align-items: center;
       gap: 8px;
     }
-    .logo-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--gold);
-      display: inline-block;
-    }
+    .logo-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: contain;
+}
     .logo span { color: var(--accent); }
     .nav-right {
       display: flex;
@@ -143,8 +143,8 @@
 
   <nav class="navbar">
     <a href="/" class="logo">
-      <span class="logo-dot"></span>
-      Punto Para <span>Campeonato</span>
+      <img src="/logo.png" alt="Logo Punto Para Campeonato" class="logo-img" />
+  Punto Para <span>Campeonato</span>
     </a>
     <div class="nav-right">
       <div class="nav-links">
