@@ -12,7 +12,6 @@
       --text: #f1f5f9;
       --muted: #94a3b8;
       --accent: #38bdf8;
-      --gold: #f59e0b;
       --border: #1e293b;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,14 +38,14 @@
       font-weight: 800;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
     .logo-img {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  object-fit: contain;
-}
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      object-fit: contain;
+    }
     .logo span { color: var(--accent); }
     .nav-right {
       display: flex;
@@ -67,12 +66,14 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 3px;
+      position: relative;
+      z-index: 10;
     }
     .lang-btn {
       background: transparent;
       border: none;
       color: var(--muted);
-      padding: 4px 10px;
+      padding: 6px 12px;
       font-size: 0.8rem;
       font-weight: 700;
       border-radius: 6px;
@@ -123,7 +124,7 @@
       margin-bottom: 10px;
     }
     .footer-links a { color: var(--accent); }
-    .hidden { display: none; }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
@@ -131,7 +132,7 @@
   <nav class="navbar">
     <a href="/" class="logo">
       <img src="/logo.png" alt="Logo Punto Para Campeonato" class="logo-img" />
-  Punto Para <span>Campeonato</span>
+      Punto Para <span>Campeonato</span>
     </a>
     <div class="nav-right">
       <div class="nav-links">
@@ -140,9 +141,9 @@
         <a href="mailto:info@ppctt.app">info@ppctt.app</a>
       </div>
       <div class="lang-group">
-        <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
-        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" id="btn-pt" onclick="setLang('pt')">PT</button>
+        <button type="button" class="lang-btn active" data-lang="es" id="btn-es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en" id="btn-en">EN</button>
+        <button type="button" class="lang-btn" data-lang="pt" id="btn-pt">PT</button>
       </div>
     </div>
   </nav>
@@ -210,4 +211,82 @@
       <p>We <strong>do not sell or rent</strong> your personal data to third parties.</p>
 
       <h2>3. Account & Data Deletion</h2>
-      <div class="highlight-box
+      <div class="highlight-box">
+        <p><strong>Option 1 — In-App Deletion (Instant):</strong><br />
+        Open <em>Punto Para Campeonato</em> → go to <strong>Profile / Settings</strong> → tap <strong>Delete Account</strong> and confirm. Your authentication record and personal profile data will be permanently deleted.</p>
+        <p style="margin-bottom:0;"><strong>Option 2 — Email Request:</strong><br />
+        If you no longer have the app installed, email <a href="mailto:info@ppctt.app?subject=Delete%20PPCTT%20Account" class="mail-link">info@ppctt.app</a> from your registered email address with the subject <em>"Delete PPCTT Account"</em>. We will permanently delete your account within 72 hours.</p>
+      </div>
+
+      <h2>4. Security</h2>
+      <p>All data is encrypted in transit using HTTPS/TLS and hosted on Google Firebase and Cloudflare infrastructure.</p>
+
+      <h2>5. Contact Us</h2>
+      <p>For privacy inquiries, contact us at: <a href="mailto:info@ppctt.app" class="mail-link">info@ppctt.app</a>.</p>
+    </main>
+
+    <!-- PORTUGUÊS -->
+    <main id="content-pt" class="card hidden">
+      <h1>Política de Privacidade</h1>
+      <p class="date">Última atualização: Novembro de 2026 · Domínio oficial: ppctt.app</p>
+
+      <p>O <strong>Punto Para Campeonato ("PPCTT")</strong> respeita a sua privacidade. Esta Política de Privacidade explica quais dados coletamos, como os utilizamos e como você pode gerenciar ou excluir sua conta em nossos aplicativos móveis para Android e iOS.</p>
+
+      <h2>1. Dados que coletamos</h2>
+      <ul>
+        <li><strong>Informações da conta:</strong> E-mail, nome ou apelido de jogador, foto de perfil opcional e função na comunidade, gerenciados pelo <em>Firebase Authentication</em> (E-mail/Senha, Google Sign-In ou Sign in with Apple).</li>
+        <li><strong>Conteúdo gerado pelo usuário:</strong> Torneios criados, placares de partidas, publicações no fórum, fotos enviadas às galerias e denúncias armazenadas no <em>Cloud Firestore</em> e <em>Firebase Storage</em>.</li>
+        <li><strong>Diagnóstico e notificações:</strong> Registros anônimos de falhas, métricas de desempenho e tokens de notificações push (<em>Firebase Crashlytics</em> e <em>Firebase Cloud Messaging</em>).</li>
+      </ul>
+
+      <h2>2. Uso das informações</h2>
+      <ul>
+        <li>Autenticar sua conta e sincronizar seus torneios, chaves e estatísticas.</li>
+        <li>Exibir o diretório continental de clubes e federações, notícias e placares ao vivo.</li>
+        <li>Enviar notificações opcionais sobre torneios e novidades da comunidade.</li>
+        <li>Garantir a segurança da comunidade com ferramentas de denúncia e bloqueio de usuários.</li>
+      </ul>
+      <p><strong>Não vendemos nem alugamos</strong> seus dados pessoais a terceiros.</p>
+
+      <h2>3. Exclusão de conta e dados</h2>
+      <div class="highlight-box">
+        <p><strong>Opção 1 — Diretamente no Aplicativo (Imediata):</strong><br />
+        Abra o <em>Punto Para Campeonato</em> → acesse <strong>Perfil / Configurações</strong> → toque em <strong>Excluir conta</strong> e confirme. Sua conta e dados associados serão excluídos permanentemente.</p>
+        <p style="margin-bottom:0;"><strong>Opção 2 — Solicitação por e-mail:</strong><br />
+        Se já desinstalou o aplicativo, envie um e-mail a partir do endereço cadastrado para <a href="mailto:info@ppctt.app?subject=Excluir%20conta%20PPCTT" class="mail-link">info@ppctt.app</a> com o assunto <em>"Excluir conta PPCTT"</em>. Concluiremos a exclusão em até 72 horas.</p>
+      </div>
+
+      <h2>4. Segurança</h2>
+      <p>Todos os dados são criptografados em trânsito via HTTPS/TLS na infraestrutura do Google Firebase e Cloudflare.</p>
+
+      <h2>5. Contato</h2>
+      <p>Para dúvidas sobre privacidade, entre em contato: <a href="mailto:info@ppctt.app" class="mail-link">info@ppctt.app</a>.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms & Conditions</a>
+      <a href="/support">Support Center</a>
+      <a href="mailto:info@ppctt.app">info@ppctt.app</a>
+    </div>
+    <p>© 2026 Punto Para Campeonato (ppctt.app) — Panamá & América</p>
+  </footer>
+
+  <script data-cfasync="false">
+    document.querySelectorAll(".lang-btn").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        var lang = this.getAttribute("data-lang");
+        ["es", "en", "pt"].forEach(function(l) {
+          var content = document.getElementById("content-" + l);
+          var b = document.getElementById("btn-" + l);
+          if (content) content.classList.toggle("hidden", l !== lang);
+          if (b) b.classList.toggle("active", l === lang);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
