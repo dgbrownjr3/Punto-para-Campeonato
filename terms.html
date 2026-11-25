@@ -132,9 +132,9 @@
         <a href="/support">Support</a>
       </div>
       <div class="lang-group">
-        <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
-        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" id="btn-pt" onclick="setLang('pt')">PT</button>
+        <button type="button" class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+        <button type="button" class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        <button type="button" class="lang-btn" id="btn-pt" onclick="setLang('pt')">PT</button>
       </div>
     </div>
   </nav>
@@ -243,4 +243,31 @@
       <h2>5. Propriedade Intelectual</h2>
       <p>A marca, o logotipo e o software <strong>Punto Para Campeonato</strong> pertencem aos seus criadores. As marcas exibidas no <em>Brand Hub</em> pertencem aos seus respectivos proprietários.</p>
 
-      <h2>6
+      <h2>6. Contato</h2>
+      <p>Para dúvidas ou denúncias, entre em contato: <a href="mailto:info@ppctt.app" class="mail-link">info@ppctt.app</a>.</p>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms & Conditions</a>
+      <a href="/support">Support Center</a>
+      <a href="mailto:info@ppctt.app">info@ppctt.app</a>
+    </div>
+    <p>© 2026 Punto Para Campeonato (ppctt.app) — Panamá & América</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      ["es", "en", "pt"].forEach(function(l) {
+        var content = document.getElementById("content-" + l);
+        var btn = document.getElementById("btn-" + l);
+        if (content) content.classList.toggle("hidden", l !== lang);
+        if (btn) btn.classList.toggle("active", l === lang);
+      });
+    }
+  </script>
+</body>
+</html>
