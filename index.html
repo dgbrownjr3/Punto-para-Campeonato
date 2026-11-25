@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Punto Para Campeonato — La App del Tenis de Mesa de América</title>
+  <meta name="description" content="Torneos en vivo, llaves y grupos, directorio continental de federaciones y clubes de tenis de mesa de América, noticias y comunidad." />
+  <style>
+    :root {
+      --bg: #080d1a;
+      --surface: #111827;
+      --surface-hover: #182236;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-dark: #0284c7;
+      --gold: #f59e0b;
+      --border: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navbar */
+    .navbar {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+    }
+    .logo span { color: var(--accent); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .nav-links a:hover { color: #fff; }
+    .lang-group {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 3px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: #080d1a;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 20px 48px;
+      text-align: center;
+    }
+    .pill {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3.3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 32px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #080d1a;
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 0.98rem;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: #7dd3fc;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 0.98rem;
+    }
+    .btn-secondary:hover {
+      background: var(--surface-hover);
+    }
+
+    /* Features Grid */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 36px;
+      font-size: 0.98rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    /* Sponsors / Partners Banner */
+    .partner-box {
+      background: linear-gradient(135deg, #111827 0%, #0f2942 100%);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      margin: 24px 0 40px;
+    }
+    .partner-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .partner-box p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 22px;
+      font-size: 0.96rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .footer-links a { color: var(--accent); }
+    .footer-links a:hover { text-decoration: underline; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="/" class="logo">
+      <span class="logo-dot"></span>
+      Punto Para <span>Campeonato</span>
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/support" data-i18n="nav_support">Soporte</a>
+        <a href="/privacy" data-i18n="nav_privacy">Privacidad</a>
+        <a href="mailto:info@ppctt.app">info@ppctt.app</a>
+      </div>
+      <div class="lang-group">
+        <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-pt" onclick="setLang('pt')">PT</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="pill" data-i18n="hero_badge">TENIS DE MESA DE AMÉRICA · ANDROID & iOS</div>
+    <h1 data-i18n="hero_title">Todo el circuito de <span>Tenis de Mesa</span> en tu bolsillo</h1>
+    <p data-i18n="hero_desc">
+      Organiza torneos con grupos y llaves en tiempo real, explora el directorio continental de federaciones y clubes, sigue las noticias del circuito y conecta con toda la comunidad.
+    </p>
+    <div class="store-buttons">
+      <a href="mailto:info@ppctt.app?subject=Acceso%20Android%20PPCTT" class="btn-primary" data-i18n="cta_android">
+        Descargar para Android (Google Play)
+      </a>
+      <a href="#partners" class="btn-secondary" data-i18n="cta_ios">
+        iOS (App Store · Próximamente)
+      </a>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <h2 class="section-title" data-i18n="feat_heading">Diseñada para jugadores, clubes y organizadores</h2>
+    <p class="section-sub" data-i18n="feat_sub">
+      Herramientas rápidas, trilingües y pensadas para la realidad de los torneos y entrenamientos en todo el continente.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🏆</div>
+        <h3 data-i18n="f1_title">Torneos: Grupos + Llave Final</h3>
+        <p data-i18n="f1_desc">Crea y publica torneos públicos o privados, gestiona fases de grupos, cruces eliminatorios y marcadores en vivo al instante.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌎</div>
+        <h3 data-i18n="f2_title">Directorio Continental</h3>
+        <p data-i18n="f2_desc">Encuentra federaciones nacionales, asociaciones regionales y clubes verificados donde entrenar o competir en toda América.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📰</div>
+        <h3 data-i18n="f3_title">Noticias, Foro y Galería</h3>
+        <p data-i18n="f3_desc">Mantente al día con resultados internacionales, debates de equipamiento, consejos técnicos y galerías fotográficas de eventos.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏓</div>
+        <h3 data-i18n="f4_title">Brand Hub & Equipamiento</h3>
+        <p data-i18n="f4_desc">Descubre catálogos oficiales de marcas líderes de maderas, gomas y mesas con contacto directo para jugadores y clubes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section" id="partners">
+    <div class="partner-box">
+      <h2 data-i18n="partner_title">¿Representas una marca, club o federación?</h2>
+      <p data-i18n="partner_desc">
+        Integra tu catálogo en nuestro Brand Hub, actualiza los datos oficiales de tu club en el directorio o solicita nuestro Media Kit para patrocinios en torneos.
+      </p>
+      <a href="mailto:info@ppctt.app?subject=Alianza%20/%20Media%20Kit%20PPCTT" class="btn-primary" data-i18n="partner_cta">
+        Contactar a info@ppctt.app
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="/" data-i18n="f_home">Inicio</a>
+      <a href="/privacy" data-i18n="f_privacy">Política de Privacidad y Eliminación de Cuenta</a>
+      <a href="/support" data-i18n="f_support">Centro de Soporte</a>
+      <a href="mailto:info@ppctt.app">info@ppctt.app</a>
+    </div>
+    <p>© 2026 Punto Para Campeonato (ppctt.app) — Panamá & América</p>
+  </footer>
+
+  <script>
+    const translations = {
+      es: {
+        nav_support: "Soporte",
+        nav_privacy: "Privacidad",
+        hero_badge: "TENIS DE MESA DE AMÉRICA · ANDROID & iOS",
+        hero_title: "Todo el circuito de <span>Tenis de Mesa</span> en tu bolsillo",
+        hero_desc: "Organiza torneos con grupos y llaves en tiempo real, explora el directorio continental de federaciones y clubes, sigue las noticias del circuito y conecta con toda la comunidad.",
+        cta_android: "Descargar para Android (Google Play)",
+        cta_ios: "iOS (App Store · Próximamente)",
+        feat_heading: "Diseñada para jugadores, clubes y organizadores",
+        feat_sub: "Herramientas rápidas, trilingües y pensadas para la realidad de los torneos y entrenamientos en todo el continente.",
+        f1_title: "Torneos: Grupos + Llave Final",
+        f1_desc: "Crea y publica torneos públicos o privados, gestiona fases de grupos, cruces eliminatorios y marcadores en vivo al instante.",
+        f2_title: "Directorio Continental",
+        f2_desc: "Encuentra federaciones nacionales, asociaciones regionales y clubes verificados donde entrenar o competir en toda América.",
+        f3_title: "Noticias, Foro y Galería",
+        f3_desc: "Mantente al día con resultados internacionales, debates de equipamiento, consejos técnicos y galerías fotográficas de eventos.",
+        f4_title: "Brand Hub & Equipamiento",
+        f4_desc: "Descubre catálogos oficiales de marcas líderes de maderas, gomas y mesas con contacto directo para jugadores y clubes.",
+        partner_title: "¿Representas una marca, club o federación?",
+        partner_desc: "Integra tu catálogo en nuestro Brand Hub, actualiza los datos oficiales de tu club en el directorio o solicita nuestro Media Kit para patrocinios en torneos.",
+        partner_cta: "Contactar a info@ppctt.app",
+        f_home: "Inicio",
+        f_privacy: "Política de Privacidad y Eliminación de Cuenta",
+        f_support: "Centro de Soporte"
+      },
+      en: {
+        nav_support: "Support",
+        nav_privacy: "Privacy",
+        hero_badge: "PAN-AMERICAN TABLE TENNIS · ANDROID & iOS",
+        hero_title: "The entire <span>Table Tennis</span> circuit in your pocket",
+        hero_desc: "Run live tournaments with Groups + Knockout stages, explore the Pan-American directory of federations and clubs, follow circuit news, and connect with the community.",
+        cta_android: "Get it on Android (Google Play)",
+        cta_ios: "iOS (App Store · Coming Soon)",
+        feat_heading: "Built for players, clubs, and tournament organizers",
+        feat_sub: "Fast, trilingual tools designed for real-world tournaments and training sessions across the Americas.",
+        f1_title: "Tournaments: Groups + Knockout",
+        f1_desc: "Create and publish public or private tournaments, manage group stages, knockout brackets, and live match scores effortlessly.",
+        f2_title: "Pan-American Directory",
+        f2_desc: "Discover national federations, regional associations, and verified clubs to train or compete across the Americas.",
+        f3_title: "News, Forum & Photo Gallery",
+        f3_desc: "Stay updated with international results, equipment discussions, coaching tips, and event photo galleries.",
+        f4_title: "Brand Hub & Equipment",
+        f4_desc: "Browse official catalogs from top blade, rubber, and table brands with direct contact for players and clubs.",
+        partner_title: "Represent a brand, club, or federation?",
+        partner_desc: "Showcase your catalog in our Brand Hub, update your club's official directory listing, or request our Media Kit for tournament sponsorships.",
+        partner_cta: "Contact info@ppctt.app",
+        f_home: "Home",
+        f_privacy: "Privacy Policy & Account Deletion",
+        f_support: "Support Center"
+      },
+      pt: {
+        nav_support: "Suporte",
+        nav_privacy: "Privacidade",
+        hero_badge: "TÊNIS DE MESA DAS AMÉRICAS · ANDROID & iOS",
+        hero_title: "Todo o circuito de <span>Tênis de Mesa</span> no seu bolso",
+        hero_desc: "Organize torneios com grupos e chaves em tempo real, explore o diretório continental de federações e clubes, acompanhe notícias e conecte-se com a comunidade.",
+        cta_android: "Baixar para Android (Google Play)",
+        cta_ios: "iOS (App Store · Em Breve)",
+        feat_heading: "Feito para jogadores, clubes e organizadores",
+        feat_sub: "Ferramentas rápidas e trilíngues pensadas para a realidade dos torneios e treinos em todo o continente.",
+        f1_title: "Torneios: Grupos + Chave Final",
+        f1_desc: "Crie e publique torneios públicos ou privados, gerencie fases de grupos, eliminatórias e placares ao vivo.",
+        f2_title: "Diretório Continental",
+        f2_desc: "Encontre federações nacionais, associações regionais e clubes verificados para treinar ou competir nas Américas.",
+        f3_title: "Notícias, Fórum e Galeria",
+        f3_desc: "Fique por dentro dos resultados internacionais, debates sobre equipamentos, dicas técnicas e galerias de fotos.",
+        f4_title: "Brand Hub & Equipamentos",
+        f4_desc: "Explore catálogos oficiais das principais marcas de raquetes, borrachas e mesas com contato direto.",
+        partner_title: "Representa uma marca, clube ou federação?",
+        partner_desc: "Integre seu catálogo em nosso Brand Hub, atualize os dados oficiais do seu clube ou solicite nosso Media Kit.",
+        partner_cta: "Entrar em contato: info@ppctt.app",
+        f_home: "Início",
+        f_privacy: "Política de Privacidade e Exclusão de Conta",
+        f_support: "Central de Suporte"
+      }
+    };
+
+    function setLang(lang) {
+      const dict = translations[lang] || translations.es;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.innerHTML = dict[key];
+      });
+      ["es", "en", "pt"].forEach(l => {
+        document.getElementById("btn-" + l).classList.toggle("active", l === lang);
+      });
+    }
+  </script>
+</body>
+</html>
