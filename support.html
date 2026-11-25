@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soporte — Punto Para Campeonato (PPCTT)</title>
+  <style>
+    :root {
+      --bg: #080d1a;
+      --surface: #111827;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --gold: #f59e0b;
+      --border: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { text-decoration: none; color: inherit; }
+    .navbar {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+    }
+    .logo span { color: var(--accent); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .nav-links a:hover { color: #fff; }
+    .lang-group {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 3px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: #080d1a;
+    }
+    .container {
+      max-width: 860px;
+      margin: 32px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+    }
+    h1 { font-size: 1.85rem; margin-bottom: 10px; color: #fff; }
+    h2 { font-size: 1.2rem; margin: 24px 0 12px; color: var(--accent); }
+    p { font-size: 0.96rem; margin-bottom: 12px; color: var(--text); }
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #080d1a;
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 10px;
+      margin: 8px 0 16px;
+      font-size: 0.95rem;
+    }
+    .cta-btn:hover { background: #7dd3fc; }
+    .faq-item {
+      border-top: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .faq-item strong {
+      display: block;
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .faq-item p { color: var(--muted); margin-bottom: 0; }
+    .mail-link { color: var(--accent); font-weight: 600; }
+    .mail-link:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 40px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .footer-links a { color: var(--accent); }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
 
+  <nav class="navbar">
+    <a href="/" class="logo">
+      <span class="logo-dot"></span>
+      Punto Para <span>Campeonato</span>
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/">Inicio</a>
+        <a href="/privacy">Privacy</a>
+        <a href="mailto:info@ppctt.app">info@ppctt.app</a>
+      </div>
+      <div class="lang-group">
+        <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-pt" onclick="setLang('pt')">PT</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- ESPAÑOL -->
+    <main id="content-es" class="card">
+      <h1>Centro de Soporte</h1>
+      <p>¿Necesitas ayuda con tu cuenta, la creación de torneos, el directorio de clubes o deseas reportar un inconveniente técnico? Escríbenos directamente a nuestro correo oficial de soporte.</p>
+
+      <a href="mailto:info@ppctt.app?subject=Soporte%20PPCTT" class="cta-btn">Escribir a info@ppctt.app</a>
+
+      <h2>Preguntas Frecuentes (FAQ)</h2>
+
+      <div class="faq-item">
+        <strong>¿Cómo creo y publico un torneo en la app?</strong>
+        <p>Inicia sesión con tu cuenta, entra al módulo de <strong>Torneos</strong> y pulsa <strong>Crear Torneo</strong>. Puedes configurar fases de Grupos + Llave Final y publicarlo directamente para la comunidad.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>¿Cómo registro o actualizo los datos de mi club o federación?</strong>
+        <p>Envíanos el nombre oficial, ciudad/país, horarios de entrenamiento y redes sociales de tu club a <a href="mailto:info@ppctt.app" class="mail-link">info@ppctt.app</a> para incluirlo o actualizarlo en el Directorio Continental.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>¿Cómo reporto contenido ofensivo o bloqueo a un usuario?</strong>
+        <p>Pulsa el menú de opciones (<strong>⋮</strong>) en cualquier publicación del foro, torneo o galería y selecciona <strong>Reportar</strong> o <strong>Bloquear usuario</strong>. El contenido del usuario bloqueado dejará de mostrarse en tu cuenta de inmediato.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>¿Cómo elimino mi cuenta permanentemente?</strong>
+        <p>Ve a tu <strong>Perfil → Ajustes → Eliminar cuenta</strong> dentro de la aplicación, o revisa los pasos completos en nuestra <a href="/privacy" class="mail-link">Política de Privacidad</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Patrocinios y alianzas con marcas (Brand Hub)</strong>
+        <p>Si representas una marca de equipamiento deportivo o tienda oficial y deseas aparecer en nuestro Brand Hub o patrocinar torneos, contáctanos en <a href="mailto:info@ppctt.app" class="mail-link">info@ppctt.app</a>.</p>
+      </div>
+    </main>
+
+    <!-- ENGLISH -->
+    <main id="content-en" class="card hidden">
+      <h1>Support Center</h1>
+      <p>Need assistance with your account, tournament brackets, club directory listings, or want to report a technical issue? Reach out to our team directly via email.</p>
+
+      <a href="mailto:info@ppctt.app?subject=PPCTT%20App%20Support" class="cta-btn">Email info@ppctt.app</a>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <strong>How do I create and publish a tournament?</strong>
+        <p>Sign in to your account, open the <strong>Tournaments</strong> tab, and tap <strong>Create Tournament</strong>. You can set up Groups + Knockout stages and publish directly to the public feed.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>How can I add or update my club in the directory?</strong>
+        <p>Send your club's official name, city/country, training schedule, and social links to <a href="mailto:info@ppctt.app" class="mail-link">info@ppctt.app</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>How do I report content or block an abusive user?</strong>
+        <p>Tap the options icon (<strong>⋮</strong>) on any post, tournament, or gallery item and select <strong>Report</strong> or <strong>Block User</strong>. Blocked users' content is immediately hidden from your feed.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>How do I permanently delete my account?</strong>
+        <p>Open the app, go to <strong>Profile → Settings → Delete Account</strong>, or check our <a href="/privacy" class="mail-link">Privacy Policy</a> for email deletion instructions.</p>
+      </div>
+    </main>
+
+    <!-- PORTUGUÊS -->
+    <main id="content-pt" class="card hidden">
+      <h1>Central de Suporte</h1>
+      <p>Precisa de ajuda com sua conta, chaves de torneios, cadastro no diretório de clubes ou deseja relatar um problema técnico? Entre em contato conosco por e-mail.</p>
+
+      <a href="mailto:info@ppctt.app?subject=Suporte%20PPCTT" class="cta-btn">Enviar e-mail para info@ppctt.app</a>
+
+      <h2>Perguntas Frequentes (FAQ)</h2>
+
+      <div class="faq-item">
+        <strong>Como crio e publico um torneio no aplicativo?</strong>
+        <p>Faça login na sua conta, acesse a aba <strong>Torneios</strong> e toque em <strong>Criar Torneio</strong>. Você pode configurar Grupos + Chave Final e publicar diretamente para a comunidade.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Como adiciono ou atualizo meu clube no diretório?</strong>
+        <p>Envie o nome oficial, cidade/país, horários de treino e redes sociais do seu clube para <a href="mailto:info@ppctt.app" class="mail-link">info@ppctt.app</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Como denuncio conteúdo ou bloqueio um usuário?</strong>
+        <p>Toque no ícone de opções (<strong>⋮</strong>) em qualquer publicação ou torneio e selecione <strong>Denunciar</strong> ou <strong>Bloquear usuário</strong>. O conteúdo será ocultado imediatamente.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Como excluo minha conta permanentemente?</strong>
+        <p>Acesse <strong>Perfil → Configurações → Excluir conta</strong> no aplicativo ou veja as instruções na nossa <a href="/privacy" class="mail-link">Política de Privacidade</a>.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/support">Support Center</a>
+      <a href="mailto:info@ppctt.app">info@ppctt.app</a>
+    </div>
+    <p>© 2026 Punto Para Campeonato (ppctt.app) — Panamá & América</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      ["es", "en", "pt"].forEach(l => {
+        document.getElementById("content-" + l).classList.toggle("hidden", l !== lang);
+        document.getElementById("btn-" + l).classList.toggle("active", l === lang);
+      });
+    }
+  </script>
+</body>
+</html>
