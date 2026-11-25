@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Punto Para Campeonato — La App del Tenis de Mesa de América</title>
+  <link rel="icon" type="image/png" href="/logo.png" />
   <meta name="description" content="Torneos en vivo, llaves y grupos, directorio continental de federaciones y clubes de tenis de mesa de América, noticias y comunidad." />
   <style>
     :root {
@@ -47,12 +48,11 @@
       align-items: center;
       gap: 8px;
     }
-    .logo-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--gold);
-      display: inline-block;
+    .logo-img {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      object-fit: contain;
     }
     .logo span { color: var(--accent); }
     .nav-right {
@@ -244,7 +244,7 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <a href="/" class="logo">
-      <span class="logo-dot"></span>
+      <img src="/logo.png" alt="Logo Punto Para Campeonato" class="logo-img" />
       Punto Para <span>Campeonato</span>
     </a>
     <div class="nav-right">
