@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Punto Para Campeonato (PPCTT)</title>
+  <style>
+    :root {
+      --bg: #080d1a;
+      --surface: #111827;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --gold: #f59e0b;
+      --border: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { text-decoration: none; color: inherit; }
+    .navbar {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+    }
+    .logo span { color: var(--accent); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .nav-links a:hover { color: #fff; }
+    .lang-group {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 3px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: #080d1a;
+    }
+    .container {
+      max-width: 860px;
+      margin: 32px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+    }
+    h1 { font-size: 1.85rem; margin-bottom: 6px; color: #fff; }
+    .date { color: var(--muted); font-size: 0.88rem; margin-bottom: 22px; }
+    h2 { font-size: 1.15rem; margin: 24px 0 10px; color: var(--accent); }
+    p, li { font-size: 0.96rem; margin-bottom: 10px; color: var(--text); }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    .highlight-box {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 16px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .mail-link { color: var(--accent); font-weight: 600; }
+    .mail-link:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 40px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .footer-links a { color: var(--accent); }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
 
+  <nav class="navbar">
+    <a href="/" class="logo">
+      <span class="logo-dot"></span>
+      Punto Para <span>Campeonato</span>
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/">Inicio</a>
+        <a href="/support">Support</a>
+        <a href="mailto:info@ppctt.app">info@ppctt.app</a>
+      </div>
+      <div class="lang-group">
+        <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-pt" onclick="setLang('pt')">PT</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- ESPAÑOL -->
+    <main id="content-es" class="card">
+      <h1>Política de Privacidad</h1>
+      <p class="date">Última actualización: Noviembre de 2026 · Dominio oficial: ppctt.app</p>
+
+      <p><strong>Punto Para Campeonato ("PPCTT")</strong> respeta la privacidad de sus usuarios. Esta Política de Privacidad explica qué datos recopilamos, cómo los utilizamos y cómo puedes gestionar o eliminar tu cuenta y datos personales en nuestra aplicación móvil para Android e iOS.</p>
+
+      <h2>1. Datos que recopilamos</h2>
+      <ul>
+        <li><strong>Información de cuenta:</strong> Correo electrónico, nombre o alias de jugador, foto de perfil opcional y rol dentro de la comunidad, gestionados mediante <em>Firebase Authentication</em> (correo/contraseña, Google Sign-In o Sign in with Apple).</li>
+        <li><strong>Contenido generado por el usuario:</strong> Torneos creados, resultados de partidos, publicaciones en el foro comunitario, fotografías subidas a galerías y reportes de moderación almacenados en <em>Cloud Firestore</em> y <em>Firebase Storage</em>.</li>
+        <li><strong>Diagnóstico y notificaciones:</strong> Registros anónimos de fallos, métricas de rendimiento y tokens de notificaciones push (<em>Firebase Crashlytics</em> y <em>Firebase Cloud Messaging</em>) para mantener la estabilidad del servicio.</li>
+      </ul>
+
+      <h2>2. Uso de la información</h2>
+      <ul>
+        <li>Autenticar tu sesión y sincronizar tus torneos, llaves y estadísticas.</li>
+        <li>Mostrar el directorio continental de clubes y federaciones, noticias y resultados en tiempo real.</li>
+        <li>Enviar notificaciones opcionales sobre torneos o actividad en la comunidad.</li>
+        <li>Proteger a la comunidad mediante herramientas de reporte de contenido y bloqueo de usuarios.</li>
+      </ul>
+      <p><strong>No vendemos ni alquilamos</strong> tus datos personales a terceros ni utilizamos redes de rastreo publicitario invasivo.</p>
+
+      <h2>3. Eliminación de cuenta y datos (Account Deletion)</h2>
+      <div class="highlight-box">
+        <p><strong>Opción 1 — Directamente desde la App (Inmediata):</strong><br />
+        Abre <em>Punto Para Campeonato</em> → ve a tu <strong>Perfil / Ajustes</strong> → selecciona <strong>Eliminar cuenta</strong> y confirma la acción. Tu cuenta de autenticación y datos de perfil asociados se eliminarán de forma permanente.</p>
+        <p style="margin-bottom:0;"><strong>Opción 2 — Solicitud por correo electrónico:</strong><br />
+        Si ya desinstalaste la aplicación, envía un correo desde tu dirección registrada a <a href="mailto:info@ppctt.app?subject=Eliminar%20cuenta%20PPCTT" class="mail-link">info@ppctt.app</a> con el asunto <em>"Eliminar cuenta PPCTT"</em>. Procesaremos la eliminación completa en un plazo máximo de 72 horas.</p>
+      </div>
+
+      <h2>4. Seguridad</h2>
+      <p>Toda la comunicación entre la aplicación y nuestros servidores se cifra mediante HTTPS/TLS sobre la infraestructura de Google Firebase y Cloudflare.</p>
+
+      <h2>5. Contacto</h2>
+      <p>Para cualquier consulta sobre privacidad o protección de datos, contáctanos en: <a href="mailto:info@ppctt.app" class="mail-link">info@ppctt.app</a>.</p>
+    </main>
+
+    <!-- ENGLISH -->
+    <main id="content-en" class="card hidden">
+      <h1>Privacy Policy</h1>
+      <p class="date">Last updated: November 2026 · Official domain: ppctt.app</p>
+
+      <p><strong>Punto Para Campeonato ("PPCTT")</strong> respects your privacy. This Privacy Policy describes what data we collect, how we use it, and how you can manage or delete your account in our Android and iOS mobile applications.</p>
+
+      <h2>1. Information We Collect</h2>
+      <ul>
+        <li><strong>Account Information:</strong> Email address, player name or alias, optional profile photo, and community role managed via <em>Firebase Authentication</em> (Email/Password, Google Sign-In, or Sign in with Apple).</li>
+        <li><strong>User-Generated Content:</strong> Tournaments created, match scores, community forum posts, gallery photos, and moderation reports stored in <em>Cloud Firestore</em> and <em>Firebase Storage</em>.</li>
+        <li><strong>Diagnostics & Notifications:</strong> Anonymous crash logs, performance metrics, and push notification tokens (<em>Firebase Crashlytics</em> and <em>Firebase Cloud Messaging</em>) to maintain service stability.</li>
+      </ul>
+
+      <h2>2. How We Use Information</h2>
+      <ul>
+        <li>Authenticate your account and sync your tournaments, brackets, and player stats.</li>
+        <li>Provide access to the Pan-American directory of clubs and federations, news, and live scores.</li>
+        <li>Deliver optional push notifications about tournaments and community updates.</li>
+        <li>Maintain community safety through user blocking and content reporting tools.</li>
+      </ul>
+      <p>We <strong>do not sell or rent</strong> your personal data to third parties.</p>
+
+      <h2>3. Account & Data Deletion</h2>
+      <div class="highlight-box
