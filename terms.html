@@ -66,12 +66,14 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 3px;
+      position: relative;
+      z-index: 10;
     }
     .lang-btn {
       background: transparent;
       border: none;
       color: var(--muted);
-      padding: 4px 10px;
+      padding: 6px 12px;
       font-size: 0.8rem;
       font-weight: 700;
       border-radius: 6px;
@@ -115,7 +117,7 @@
       margin-bottom: 10px;
     }
     .footer-links a { color: var(--accent); }
-    .hidden { display: none; }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
@@ -132,9 +134,9 @@
         <a href="/support">Support</a>
       </div>
       <div class="lang-group">
-        <button type="button" class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
-        <button type="button" class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-        <button type="button" class="lang-btn" id="btn-pt" onclick="setLang('pt')">PT</button>
+        <button type="button" class="lang-btn active" data-lang="es" id="btn-es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en" id="btn-en">EN</button>
+        <button type="button" class="lang-btn" data-lang="pt" id="btn-pt">PT</button>
       </div>
     </div>
   </nav>
@@ -259,15 +261,18 @@
     <p>© 2026 Punto Para Campeonato (ppctt.app) — Panamá & América</p>
   </footer>
 
-  <script>
-    function setLang(lang) {
-      ["es", "en", "pt"].forEach(function(l) {
-        var content = document.getElementById("content-" + l);
-        var btn = document.getElementById("btn-" + l);
-        if (content) content.classList.toggle("hidden", l !== lang);
-        if (btn) btn.classList.toggle("active", l === lang);
+  <script data-cfasync="false">
+    document.querySelectorAll(".lang-btn").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        var lang = this.getAttribute("data-lang");
+        ["es", "en", "pt"].forEach(function(l) {
+          var content = document.getElementById("content-" + l);
+          var b = document.getElementById("btn-" + l);
+          if (content) content.classList.toggle("hidden", l !== lang);
+          if (b) b.classList.toggle("active", l === lang);
+        });
       });
-    }
+    });
   </script>
 </body>
 </html>
