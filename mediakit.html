@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Kit & Sponsorships — Punto Para Campeonato (PPCTT)</title>
+  <meta name="description" content="Media Kit oficial y oportunidades de patrocinio de Punto Para Campeonato (PPCTT), el ecosistema digital del tenis de mesa en América." />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <style>
+    :root {
+      --bg: #070d19;
+      --surface: #111b2e;
+      --surface-alt: #16233b;
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.14);
+      --gold: #f59e0b;
+      --gold-soft: rgba(245, 158, 11, 0.14);
+      --green: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 4rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(7, 13, 25, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .brand img {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-pdf {
+      background: var(--surface-alt);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.42rem 0.85rem;
+      border-radius: 9px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .btn-pdf:hover {
+      border-color: var(--accent);
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 0.3rem;
+      background: var(--surface);
+      padding: 0.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 0.35rem 0.6rem;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #04101f;
+    }
+
+    /* Main */
+    main {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 0;
+    }
+
+    /* Hero */
+    .hero {
+      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 55%),
+                  linear-gradient(135deg, var(--surface) 0%, #0b1324 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.4rem 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    .badge.gold {
+      background: var(--gold-soft);
+      color: var(--gold);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 3.8vw, 2.55rem);
+      line-height: 1.2;
+      margin-bottom: 0.9rem;
+      color: #ffffff;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      max-width: 780px;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #04101f;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 0.7rem 1.35rem;
+      border-radius: 11px;
+      transition: transform 0.15s ease, opacity 0.2s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: var(--surface-alt);
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 0.7rem 1.35rem;
+      border-radius: 11px;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.35rem 1.25rem;
+    }
+
+    .kpi-value {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.15;
+      margin-bottom: 0.35rem;
+    }
+
+    .kpi-label {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.2rem;
+    }
+
+    .kpi-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Section */
+    section.kit-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    section.kit-section h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.85rem;
+      color: #ffffff;
+    }
+
+    section.kit-section p {
+      color: #cbd5e1;
+      margin-bottom: 1rem;
+    }
+
+    /* Two-column layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    .feature-box {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+
+    .feature-box h3 {
+      font-size: 1.05rem;
+      color: #ffffff;
+      margin-bottom: 0.45rem;
+    }
+
+    .feature-box p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* Packages Grid */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .pkg-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pkg-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.25);
+    }
+
+    .pkg-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .pkg-card.featured .pkg-tag {
+      color: var(--gold);
+    }
+
+    .pkg-card h3 {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin-bottom: 0.65rem;
+    }
+
+    .pkg-card ul {
+      padding-left: 1.2rem;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .pkg-card li {
+      margin-bottom: 0.45rem;
+    }
+
+    /* Roadmap */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .road-step {
+      background: var(--surface-alt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 1rem 1.15rem;
+    }
+
+    .road-date {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .road-step h4 {
+      font-size: 0.98rem;
+      color: #ffffff;
+      margin-bottom: 0.3rem;
+    }
+
+    .road-step p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* Contact Box */
+    .contact-banner {
+      background: linear-gradient(135deg, #13223d 0%, #0d172a 100%);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 18px;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .contact-banner h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.35rem;
+      color: #ffffff;
+    }
+
+    .contact-banner p {
+      color: #cbd5e1;
+      margin-bottom: 0;
+      max-width: 560px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.92rem;
+    }
+
+    footer {
+      max-width: 1060px;
+      margin: 2.5rem auto 0;
+      padding: 1.5rem 1.25rem 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    /* Language visibility */
+    [data-lang] {
+      display: none;
+    }
+
+    body.lang-es [data-lang="es"],
+    body.lang-en [data-lang="en"],
+    body.lang-pt [data-lang="pt"] {
+      display: block;
+    }
+
+    span[data-lang] {
+      display: none;
+    }
+
+    body.lang-es span[data-lang="es"],
+    body.lang-en span[data-lang="en"],
+    body.lang-pt span[data-lang="pt"] {
+      display: inline;
+    }
+
+    /* Print / PDF Export Styles */
+    @media print {
+      body {
+        background: #ffffff;
+        color: #0f172a;
+        padding-bottom: 0;
+      }
+      header, .cta-row, footer {
+        display: none !important;
+      }
+      .hero, .kpi-card, section.kit-section, .feature-box, .pkg-card, .road-step, .contact-banner {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+      }
+      .hero h1, section.kit-section h2, .kpi-label, .feature-box h3, .pkg-card h3, .road-step h4, .contact-banner h2 {
+        color: #0f172a !important;
+      }
+      .hero p, section.kit-section p, .pkg-card ul, .contact-banner p {
+        color: #334155 !important;
+      }
+      .kpi-value, .pkg-tag, .road-date {
+        color: #0284c7 !important;
+      }
+    }
+  </style>
+</head>
+<body class="lang-es">
+
+  <header>
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <img src="/logo.png" alt="Punto Para Campeonato" />
+        <span>Punto Para Campeonato</span>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-pdf" onclick="window.print()">
+          <span data-lang="es">📄 Guardar PDF</span>
+          <span data-lang="en">📄 Save PDF</span>
+          <span data-lang="pt">📄 Salvar PDF</span>
+        </button>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button class="lang-btn active" onclick="setLang('es')">ES</button>
+          <button class="lang-btn" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" onclick="setLang('pt')">PT</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="pill-row">
+        <span class="badge">
+          <span data-lang="es">Media Kit Oficial 2026–2027</span>
+          <span data-lang="en">Official Media Kit 2026–2027</span>
+          <span data-lang="pt">Media Kit Oficial 2026–2027</span>
+        </span>
+        <span class="badge gold">
+          <span data-lang="es">Ecosistema Panamericano de Tenis de Mesa</span>
+          <span data-lang="en">Pan-American Table Tennis Ecosystem</span>
+          <span data-lang="pt">Ecossistema Pan-Americano de Tênis de Mesa</span>
+        </span>
+      </div>
+      <h1>
+        <span data-lang="es">Conectamos marcas líderes con los jugadores, clubes y torneos de América</span>
+        <span data-lang="en">Connecting leading brands with table tennis players, clubs & tournaments across the Americas</span>
+        <span data-lang="pt">Conectamos marcas líderes aos jogadores, clubes e torneios das Américas</span>
+      </h1>
+      <p>
+        <span data-lang="es">Punto Para Campeonato (PPCTT) combina una plataforma móvil trilingüe (ES / EN / PT) de resultados en vivo, gestión de torneos y directorio continental con una comunidad digital altamente segmentada de atletas, entrenadores y directivos.</span>
+        <span data-lang="en">Punto Para Campeonato (PPCTT) combines a trilingual (ES / EN / PT) mobile app for live scores, tournament brackets, and a continental directory with a highly targeted digital community of athletes, coaches, and organizers.</span>
+        <span data-lang="pt">O Punto Para Campeonato (PPCTT) combina um aplicativo móvel trilíngue (ES / EN / PT) de placares ao vivo, gestão de torneios e diretório continental com uma comunidade digital altamente segmentada de atletas, técnicos e dirigentes.</span>
+      </p>
+      <div class="cta-row">
+        <a href="#paquetes" class="btn-primary">
+          <span data-lang="es">Ver Espacios de Patrocinio</span>
+          <span data-lang="en">View Sponsorship Packages</span>
+          <span data-lang="pt">Ver Pacotes de Patrocínio</span>
+        </a>
+        <a href="#contacto" class="btn-secondary">
+          <span data-lang="es">Solicitar Propuesta Personalizada</span>
+          <span data-lang="en">Request Custom Proposal</span>
+          <span data-lang="pt">Solicitar Proposta Personalizada</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value">42+</div>
+        <div class="kpi-label">
+          <span data-lang="es">Países y Territorios</span>
+          <span data-lang="en">Countries & Territories</span>
+          <span data-lang="pt">Países e Territórios</span>
+        </div>
+        <div class="kpi-sub">
+          <span data-lang="es">Cobertura continental en América</span>
+          <span data-lang="en">Continental coverage across the Americas</span>
+          <span data-lang="pt">Cobertura continental nas Américas</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-value">280+</div>
+        <div class="kpi-label">
+          <span data-lang="es">Entidades Indexadas</span>
+          <span data-lang="en">Indexed Entities</span>
+          <span data-lang="pt">Entidades Indexadas</span>
+        </div>
+        <div class="kpi-sub">
+          <span data-lang="es">Federaciones, asociaciones, ligas y clubes</span>
+          <span data-lang="en">Federations, associations, leagues & clubs</span>
+          <span data-lang="pt">Federações, associações, ligas e clubes</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-value">3 Idiomas</div>
+        <div class="kpi-label">
+          <span data-lang="es">Español • Inglés • Portugués</span>
+          <span data-lang="en">Spanish • English • Portuguese</span>
+          <span data-lang="pt">Espanhol • Inglês • Português</span>
+        </div>
+        <div class="kpi-sub">
+          <span data-lang="es">Alcance nativo en todo el continente</span>
+          <span data-lang="en">Native reach across the entire continent</span>
+          <span data-lang="pt">Alcance nativo em todo o continente</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-value">100%</div>
+        <div class="kpi-label">
+          <span data-lang="es">Audiencia de Nicho Activa</span>
+          <span data-lang="en">Active Niche Audience</span>
+          <span data-lang="pt">Público de Nicho Ativo</span>
+        </div>
+        <div class="kpi-sub">
+          <span data-lang="es">Compradores reales de equipamiento TT</span>
+          <span data-lang="en">Active buyers of table tennis equipment</span>
+          <span data-lang="pt">Compradores reais de equipamentos de TM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUDIENCE & VALUE -->
+    <section class="kit-section">
+      <h2>
+        <span data-lang="es">Nuestra Audiencia y Propuesta de Valor</span>
+        <span data-lang="en">Our Audience & Value Proposition</span>
+        <span data-lang="pt">Nosso Público e Proposta de Valor</span>
+      </h2>
+      <p>
+        <span data-lang="es">A diferencia de los medios deportivos genéricos, cada usuario de Punto Para Campeonato participa activamente en el circuito: compite, entrena en clubes, compra maderas y gomas con frecuencia u organiza torneos oficiales.</span>
+        <span data-lang="en">Unlike generic sports media, every Punto Para Campeonato user actively participates in the circuit: competing, training at clubs, regularly purchasing blades and rubbers, or organizing official tournaments.</span>
+        <span data-lang="pt">Ao contrário da mídia esportiva genérica, cada usuário do Punto Para Campeonato participa ativamente do circuito: compete, treina em clubes, compra raquetes e borrachas com frequência ou organiza torneios oficiais.</span>
+      </p>
+      <div class="two-col">
+        <div class="feature-box">
+          <h3>
+            <span data-lang="es">🎯 Perfil del Usuario</span>
+            <span data-lang="en">🎯 User Profile</span>
+            <span data-lang="pt">🎯 Perfil do Usuário</span>
+          </h3>
+          <p>
+            <span data-lang="es">Jugadores federados y amateurs (Sub-11 a Máster), entrenadores de academias, árbitros y directivos de asociaciones regionales en Latinoamérica, EE. UU. y Canadá.</span>
+            <span data-lang="en">Federated and amateur players (U-11 to Masters), academy coaches, umpires, and regional association directors across Latin America, the US, and Canada.</span>
+            <span data-lang="pt">Jogadores federados e amadores (Sub-11 a Máster), treinadores de academias, árbitros e dirigentes de associações regionais na América Latina, EUA e Canadá.</span>
+          </p>
+        </div>
+        <div class="feature-box">
+          <h3>
+            <span data-lang="es">📱 Ecosistema Multiplataforma</span>
+            <span data-lang="en">📱 Multi-Platform Ecosystem</span>
+            <span data-lang="pt">📱 Ecossistema Multiplataforma</span>
+          </h3>
+          <p>
+            <span data-lang="es">Integración directa entre la aplicación móvil (marcadores en vivo, llaves de torneo, foro, galería) y nuestra red social @puntoparacampeonato con cobertura audiovisual.</span>
+            <span data-lang="en">Seamless integration between our mobile app (live scores, tournament brackets, forum, photo gallery) and our @puntoparacampeonato social channel with audiovisual coverage.</span>
+            <span data-lang="pt">Integração direta entre o aplicativo móvel (placares ao vivo, chaves de torneio, fórum, galeria) e nossa rede social @puntoparacampeonato com cobertura audiovisual.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORSHIP PACKAGES -->
+    <section id="paquetes" class="kit-section">
+      <h2>
+        <span data-lang="es">Formatos de Patrocinio y Activación de Marca</span>
+        <span data-lang="en">Sponsorship Formats & Brand Activation</span>
+        <span data-lang="pt">Formatos de Patrocínio e Ativação de Marca</span>
+      </h2>
+      <p>
+        <span data-lang="es">Diseñamos integraciones nativas dentro de la experiencia del jugador, evitando publicidad intrusiva y maximizando la recordación de marca.</span>
+        <span data-lang="en">We design native integrations inside the player experience, avoiding intrusive ads while maximizing brand recall and conversion.</span>
+        <span data-lang="pt">Criamos integrações nativas dentro da experiência do jogador, evitando anúncios intrusivos e maximizando a lembrança de marca.</span>
+      </p>
+
+      <div class="packages-grid">
+        <!-- Tier 1 -->
+        <div class="pkg-card">
+          <div>
+            <div class="pkg-tag">
+              <span data-lang="es">Presencia Continua</span>
+              <span data-lang="en">Always-On Presence</span>
+              <span data-lang="pt">Presença Contínua</span>
+            </div>
+            <h3>
+              <span data-lang="es">Sponsor de Módulo Torneos</span>
+              <span data-lang="en">Tournament Module Sponsor</span>
+              <span data-lang="pt">Patrocinador Módulo Torneios</span>
+            </h3>
+            <ul data-lang="es">
+              <li>Banner oficial integrado en la vista de Torneos y Llaves en vivo.</li>
+              <li>Enlace directo a tienda oficial, distribuidor regional o catálogo.</li>
+              <li>Visibilidad permanente durante eventos nacionales e internacionales.</li>
+              <li>Mención mensual en publicaciones de resultados en Instagram.</li>
+            </ul>
+            <ul data-lang="en">
+              <li>Official banner integrated in the live Tournaments & Brackets view.</li>
+              <li>Direct link to your official store, regional distributor, or catalog.</li>
+              <li>Continuous visibility during national and international events.</li>
+              <li>Monthly brand mention in Instagram tournament recap posts.</li>
+            </ul>
+            <ul data-lang="pt">
+              <li>Banner oficial integrado na tela de Torneios e Chaves ao vivo.</li>
+              <li>Link direto para loja oficial, distribuidor regional ou catálogo.</li>
+              <li>Visibilidade permanente durante eventos nacionais e internacionais.</li>
+              <li>Menção mensal nas publicações de resultados no Instagram.</li>
+            </ul>
+          </div>
+          <a href="#contacto" class="btn-secondary" style="text-align:center;">
+            <span data-lang="es">Consultar Disponibilidad</span>
+            <span data-lang="en">Check Availability</span>
+            <span data-lang="pt">Consultar Disponibilidade</span>
+          </a>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="pkg-card featured">
+          <div>
+            <div class="pkg-tag">
+              <span data-lang="es">⭐ Alianza Estratégica</span>
+              <span data-lang="en">⭐ Strategic Partner</span>
+              <span data-lang="pt">⭐ Parceria Estratégica</span>
+            </div>
+            <h3>
+              <span data-lang="es">Official Brand Hub + Cobertura</span>
+              <span data-lang="en">Official Brand Hub + Coverage</span>
+              <span data-lang="pt">Official Brand Hub + Cobertura</span>
+            </h3>
+            <ul data-lang="es">
+              <li><strong>Brand Hub Dedicado</strong> dentro de la app con lanzamientos, maderas, gomas y distribuidores por país.</li>
+              <li>Presencia destacada en el Live Ticker de resultados en tiempo real.</li>
+              <li>Videos promocionales verticales (Reels / Shorts) en @puntoparacampeonato.</li>
+              <li>Etiqueta de Marca Oficial verificada en el Directorio Continental.</li>
+            </ul>
+            <ul data-lang="en">
+              <li><strong>Dedicated Brand Hub</strong> inside the app showcasing new releases, blades, rubbers, and country distributors.</li>
+              <li>Featured placement in the real-time Live Match Ticker.</li>
+              <li>Vertical promotional videos (Reels / Shorts) on @puntoparacampeonato.</li>
+              <li>Verified Official Brand badge in the Continental Directory.</li>
+            </ul>
+            <ul data-lang="pt">
+              <li><strong>Brand Hub Dedicado</strong> no app com lançamentos, raquetes, borrachas e distribuidores por país.</li>
+              <li>Presença em destaque no Live Ticker de resultados em tempo real.</li>
+              <li>Vídeos promocionais verticais (Reels / Shorts) no @puntoparacampeonato.</li>
+              <li>Selo de Marca Oficial verificada no Diretório Continental.</li>
+            </ul>
+          </div>
+          <a href="#contacto" class="btn-primary" style="text-align:center;">
+            <span data-lang="es">Convertirse en Partner</span>
+            <span data-lang="en">Become a Partner</span>
+            <span data-lang="pt">Tornar-se Parceiro</span>
+          </a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="pkg-card">
+          <div>
+            <div class="pkg-tag">
+              <span data-lang="es">Activación por Evento</span>
+              <span data-lang="en">Event Activation</span>
+              <span data-lang="pt">Ativação por Evento</span>
+            </div>
+            <h3>
+              <span data-lang="es">Naming Rights de Torneo / Copa</span>
+              <span data-lang="en">Tournament / Cup Naming Rights</span>
+              <span data-lang="pt">Naming Rights de Torneio / Copa</span>
+            </h3>
+            <ul data-lang="es">
+              <li>Patrocinio titular de torneos oficiales gestionados en la app.</li>
+              <li>Álbum fotográfico oficial de la galería con branding de la marca.</li>
+              <li>Activación de sorteos o pruebas de material con la comunidad.</li>
+              <li>Reporte post-evento con alcance, impresiones e interacción.</li>
+            </ul>
+            <ul data-lang="en">
+              <li>Title sponsorship of official tournaments managed on the platform.</li>
+              <li>Official photo gallery album featuring your brand identity.</li>
+              <li>Community giveaways or equipment demo activations.</li>
+              <li>Post-event report with reach, impressions, and engagement metrics.</li>
+            </ul>
+            <ul data-lang="pt">
+              <li>Patrocínio máster de torneios oficiais gerenciados no aplicativo.</li>
+              <li>Álbum de fotos oficial na galeria com identidade visual da marca.</li>
+              <li>Ativação de sorteios ou testes de equipamentos com a comunidade.</li>
+              <li>Relatório pós-evento com alcance, impressões e engajamento.</li>
+            </ul>
+          </div>
+          <a href="#contacto" class="btn-secondary" style="text-align:center;">
+            <span data-lang="es">Cotizar Evento</span>
+            <span data-lang="en">Quote Event</span>
+            <span data-lang="pt">Cotar Evento</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="kit-section">
+      <h2>
+        <span data-lang="es">Hoja de Ruta de Expansión 2026–2027</span>
+        <span data-lang="en">2026–2027 Expansion Roadmap</span>
+        <span data-lang="pt">Roteiro de Expansão 2026–2027</span>
+      </h2>
+      <div class="roadmap-grid">
+        <div class="road-step">
+          <div class="road-date">Q4 2026</div>
+          <h4>
+            <span data-lang="es">Consolidación Beta & Directorio</span>
+            <span data-lang="en">Beta & Directory Consolidation</span>
+            <span data-lang="pt">Consolidação Beta e Diretório</span>
+          </h4>
+          <p>
+            <span data-lang="es">Validación en torneos reales, optimización de rendimiento y expansión a +600 entidades en América.</span>
+            <span data-lang="en">Live tournament validation, performance tuning, and expansion to 600+ entities across the Americas.</span>
+            <span data-lang="pt">Validação em torneios reais, otimização de desempenho e expansão para +600 entidades nas Américas.</span>
+          </p>
+        </div>
+
+        <div class="road-step">
+          <div class="road-date">Enero / Jan 2027</div>
+          <h4>
+            <span data-lang="es">Lanzamiento Público Android</span>
+            <span data-lang="en">Android Public Launch</span>
+            <span data-lang="pt">Lançamento Público Android</span>
+          </h4>
+          <p>
+            <span data-lang="es">Apertura global en Google Play Store con campaña continental junto a clubes y federaciones aliadas.</span>
+            <span data-lang="en">Global release on Google Play Store backed by a continental campaign with partner clubs and federations.</span>
+            <span data-lang="pt">Lançamento global na Google Play Store com campanha continental junto a clubes e federações parceiras.</span>
+          </p>
+        </div>
+
+        <div class="road-step">
+          <div class="road-date">Q1 2027</div>
+          <h4>
+            <span data-lang="es">Despliegue Oficial en iOS</span>
+            <span data-lang="en">Official iOS Rollout</span>
+            <span data-lang="pt">Lançamento Oficial no iOS</span>
+          </h4>
+          <p>
+            <span data-lang="es">Disponibilidad completa en Apple App Store para iPhone y iPad, cubriendo el 100% del mercado móvil.</span>
+            <span data-lang="en">Full availability on the Apple App Store for iPhone and iPad, covering 100% of the mobile market.</span>
+            <span data-lang="pt">Disponibilidade completa na Apple App Store para iPhone e iPad, cobrindo 100% do mercado móvel.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto" class="contact-banner">
+      <div>
+        <h2>
+          <span data-lang="es">Hablemos de tu marca en el tenis de mesa</span>
+          <span data-lang="en">Let's grow your brand in table tennis</span>
+          <span data-lang="pt">Vamos impulsionar sua marca no tênis de mesa</span>
+        </h2>
+        <p>
+          <span data-lang="es">Escríbenos para recibir tarifas actualizadas, métricas detalladas por país o agendar una demostración en vivo de los espacios disponibles.</span>
+          <span data-lang="en">Reach out for updated rate cards, country-by-country audience metrics, or a live walkthrough of available placements.</span>
+          <span data-lang="pt">Entre em contato para receber tabelas atualizadas, métricas por país ou agendar uma demonstração ao vivo dos espaços disponíveis.</span>
+        </p>
+      </div>
+      <div class="contact-details">
+        <div><strong>Email:</strong> <a href="mailto:dgbrownjr3@gmail.com">dgbrownjr3@gmail.com</a></div>
+        <div><strong>Instagram:</strong> <a href="https://instagram.com/puntoparacampeonato" target="_blank" rel="noopener">@puntoparacampeonato</a></div>
+        <div><strong>Web:</strong> <a href="https://ppctt.app">https://ppctt.app</a></div>
+        <div><strong>WhatsApp:</strong> <a href="https://wa.me/50762606718" target="_blank" rel="noopener">+507 6260-6718</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 Punto Para Campeonato (PPCTT) — Panamá</div>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/manual">Manual</a>
+      <a href="/privacy">Privacidad</a>
+      <a href="/terms">Términos</a>
+      <a href="/support">Soporte</a>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
