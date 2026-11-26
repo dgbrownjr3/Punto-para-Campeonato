@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Media Kit & Propuesta de Patrocinio 2027 — Punto Para Campeonato (PPCTT)</title>
-  <meta name="description" content="Media Kit oficial y propuesta de patrocinio 2027 de Punto Para Campeonato (PPCTT)." />
+  <meta name="description" content="Media Kit oficial y propuesta de patrocinio 2027 de Punto Para Campeonato (PPCTT). Conectamos marcas líderes con más de 60,000 atletas federados de tenis de mesa en América." />
   <link rel="icon" type="image/png" href="/logo.png" />
   <style>
     :root {
@@ -30,6 +30,8 @@
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    /* Header */
     header {
       position: sticky; top: 0; z-index: 50;
       background: rgba(7, 13, 25, 0.92);
@@ -54,12 +56,14 @@
     }
     .lang-btn {
       background: transparent; border: none; color: var(--muted); font-weight: 700;
-      font-size: 0.8rem; padding: 0.35rem 0.6rem; border-radius: 7px; cursor: pointer;
+      font-size: 0.8rem; padding: 0.35rem 0.55rem; border-radius: 7px; cursor: pointer;
+      display: flex; align-items: center; gap: 0.35rem;
     }
     .lang-btn.active { background: var(--accent); color: #04101f; }
+
     main { max-width: 1080px; margin: 0 auto; padding: 2rem 1.25rem 0; }
 
-    /* Hero con layout de 2 columnas (Texto izquierda + Celular derecha) */
+    /* Hero */
     .hero {
       background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent 55%),
                   linear-gradient(135deg, var(--surface) 0%, #0b1324 100%);
@@ -115,38 +119,38 @@
       background: linear-gradient(180deg, #0d172a 0%, #070d19 100%);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 22px;
-      padding: 1.25rem 0.9rem;
+      padding: 1.35rem 0.9rem;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.85rem;
     }
     .phone-app-logo {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
+      width: 84px;
+      height: 84px;
+      border-radius: 18px;
       object-fit: cover;
       box-shadow: 0 6px 18px rgba(56, 189, 248, 0.25);
     }
-    .phone-app-title {
-      font-size: 0.92rem;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.2;
+    .phone-flags {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      margin: 2px 0;
     }
-    .phone-app-sub {
-      font-size: 0.72rem;
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: 0.03em;
+    .flag-svg {
+      border-radius: 3px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+      display: block;
     }
     .os-badges {
       width: 100%;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      margin-top: 0.35rem;
+      margin-top: 0.2rem;
     }
     .os-pill {
       display: flex;
@@ -237,6 +241,7 @@
       align-items: center; flex-wrap: wrap; gap: 1rem; color: var(--muted); font-size: 0.86rem;
     }
     .footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
     @media print {
       body { background: #fff; color: #0f172a; padding-bottom: 0; }
       header, .cta-row, footer, .pkg-card a { display: none !important; }
@@ -244,10 +249,10 @@
         background: #f8fafc !important; color: #0f172a !important;
         border: 1px solid #cbd5e1 !important; box-shadow: none !important; break-inside: avoid;
       }
-      .hero h1, section.kit-section h2, .kpi-label, .feature-box h3, .pkg-card h3, .road-step h4, .contact-banner h2, .phone-app-title, .os-pill { color: #0f172a !important; }
+      .hero h1, section.kit-section h2, .kpi-label, .feature-box h3, .pkg-card h3, .road-step h4, .contact-banner h2, .os-pill { color: #0f172a !important; }
       .hero p, section.kit-section p, td, .pkg-card ul, .contact-banner p { color: #334155 !important; }
       th { background: #e2e8f0 !important; color: #0f172a !important; }
-      .kpi-value, .pkg-tag, .road-date, .phone-app-sub { color: #0284c7 !important; }
+      .kpi-value, .pkg-tag, .road-date { color: #0284c7 !important; }
       .os-pill.ios svg { fill: #0f172a !important; }
     }
   </style>
@@ -263,9 +268,15 @@
       <div class="nav-actions">
         <button class="btn-pdf" onclick="window.print()" data-i18n="pdfBtn">📄 Guardar PDF</button>
         <div class="lang-switcher">
-          <button class="lang-btn active" onclick="setLang('es', this)">ES</button>
-          <button class="lang-btn" onclick="setLang('en', this)">EN</button>
-          <button class="lang-btn" onclick="setLang('pt', this)">PT</button>
+          <button class="lang-btn active" onclick="setLang('es', this)" title="Español">
+            <svg width="18" height="12" viewBox="0 0 3 2" class="flag-svg"><rect width="3" height="2" fill="#c60b1e"/><rect width="3" height="1" y="0.5" fill="#ffc400"/></svg>
+          </button>
+          <button class="lang-btn" onclick="setLang('en', this)" title="English">
+            <svg width="18" height="12" viewBox="0 0 24 16" class="flag-svg"><rect width="24" height="16" fill="#b22234"/><path d="M0 2.4h24M0 4.8h24M0 7.2h24M0 9.6h24M0 12h24M0 14.4h24" stroke="#fff" stroke-width="1.2"/><rect width="10.5" height="8.5" fill="#3c3b6e"/></svg>
+          </button>
+          <button class="lang-btn" onclick="setLang('pt', this)" title="Português">
+            <svg width="18" height="12" viewBox="0 0 24 16" class="flag-svg"><rect width="24" height="16" fill="#009c3b"/><polygon points="12,2 22,8 12,14 2,8" fill="#ffdf00"/><circle cx="12" cy="8" r="3.4" fill="#002776"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -279,28 +290,45 @@
           <span class="badge gold" data-i18n="heroBadge2">Ecosistema Panamericano de Tenis de Mesa</span>
         </div>
         <h1 data-i18n="heroTitle">La plataforma móvil que conecta a jugadores, clubes, entrenadores y competiciones en toda América</h1>
-        <p data-i18n="heroDesc">Punto Para Campeonato (PPCTT) centraliza en una aplicación trilingüe (ES / EN / PT) el calendario continental, el directorio regional de clubes y tiendas autorizadas, marcadores en vivo y gestión de torneos oficiales.</p>
+        <p data-i18n="heroDesc">Punto Para Campeonato (PPCTT) centraliza en una aplicación trilingüe el calendario continental, el directorio regional de clubes y tiendas autorizadas, marcadores en vivo y gestión de torneos oficiales.</p>
         <div class="cta-row">
           <a href="#formatos" class="btn-primary" data-i18n="ctaFormats">Ver Formatos de Patrocinio</a>
           <a href="#contacto" class="btn-secondary" data-i18n="ctaContact">Contactar para Alianzas</a>
         </div>
       </div>
 
-      <!-- Celular con logos de Android y iOS -->
+      <!-- Celular con banderas de idiomas y logos de Android y iOS -->
       <div class="hero-visual">
         <div class="phone-frame">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <img src="/logo.png" alt="PPCTT App" class="phone-app-logo" />
-            <div class="phone-app-title">Punto Para Campeonato</div>
-            <div class="phone-app-sub">AMÉRICA • ES / EN / PT</div>
+            <img src="/logo.png" alt="Punto Para Campeonato" class="phone-app-logo" />
+            <div class="phone-flags">
+              <!-- España -->
+              <svg width="24" height="16" viewBox="0 0 3 2" class="flag-svg" aria-label="Español">
+                <rect width="3" height="2" fill="#c60b1e"/>
+                <rect width="3" height="1" y="0.5" fill="#ffc400"/>
+              </svg>
+              <!-- Estados Unidos -->
+              <svg width="24" height="16" viewBox="0 0 24 16" class="flag-svg" aria-label="English">
+                <rect width="24" height="16" fill="#b22234"/>
+                <path d="M0 2.4h24M0 4.8h24M0 7.2h24M0 9.6h24M0 12h24M0 14.4h24" stroke="#fff" stroke-width="1.2"/>
+                <rect width="10.5" height="8.5" fill="#3c3b6e"/>
+              </svg>
+              <!-- Brasil -->
+              <svg width="24" height="16" viewBox="0 0 24 16" class="flag-svg" aria-label="Português">
+                <rect width="24" height="16" fill="#009c3b"/>
+                <polygon points="12,2 22,8 12,14 2,8" fill="#ffdf00"/>
+                <circle cx="12" cy="8" r="3.4" fill="#002776"/>
+              </svg>
+            </div>
             <div class="os-badges">
               <div class="os-pill android">
                 <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396"/>
                 </svg>
                 <span>Android</span>
-                <span class="os-date">Ene 2027</span>
+                <span class="os-date" data-i18n="osAndroidDate">Ene 2027</span>
               </div>
               <div class="os-pill ios">
                 <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true">
@@ -494,4 +522,241 @@
     <div>© 2026–2027 Punto Para Campeonato (PPCTT) — Panamá</div>
     <div class="footer-links">
       <a href="/">Inicio</a>
-      <a href
+      <a href="/manual">Manual</a>
+      <a href="/privacy">Privacidad</a>
+      <a href="/terms">Términos</a>
+      <a href="/support">Soporte</a>
+    </div>
+  </footer>
+
+  <script>
+    const i18n = {
+      es: {
+        pdfBtn: "📄 Guardar PDF",
+        heroBadge1: "Media Kit & Propuesta de Patrocinio 2027",
+        heroBadge2: "Ecosistema Panamericano de Tenis de Mesa",
+        heroTitle: "La plataforma móvil que conecta a jugadores, clubes, entrenadores y competiciones en toda América",
+        heroDesc: "Punto Para Campeonato (PPCTT) centraliza en una aplicación trilingüe el calendario continental, el directorio regional de clubes y tiendas autorizadas, marcadores en vivo y gestión de torneos oficiales.",
+        ctaFormats: "Ver Formatos de Patrocinio",
+        ctaContact: "Contactar para Alianzas",
+        osAndroidDate: "Ene 2027",
+        kpi1Label: "Atletas Federados",
+        kpi1Sub: "Ecosistema oficial en ITTF Américas",
+        kpi2Label: "Asociaciones Nacionales",
+        kpi2Sub: "Norte, Centro, Caribe y Sudamérica",
+        kpi3Label: "Entidades Indexadas",
+        kpi3Sub: "Federaciones, asociaciones, clubes y medios",
+        kpi4Val: "3 Idiomas",
+        kpi4Label: "Español • Inglés • Portugués",
+        kpi4Sub: "Alcance nativo en todo el continente",
+        sec1Title: "1. Visión General y Propuesta de Valor",
+        sec1Desc: "Punto Para Campeonato nace para centralizar la actividad competitiva y comunitaria del tenis de mesa en el continente americano. Mientras los aficionados y atletas suelen encontrar información dispersa entre redes sociales, hojas de cálculo y portales locales, nuestra aplicación reúne en un solo lugar el calendario continental, el directorio regional de clubes y tiendas, y el seguimiento de torneos oficiales en tiempo real.",
+        sec1Callout: "<strong>Oportunidad para marcas de equipamiento:</strong> Posicionamiento directo frente a una audiencia altamente segmentada de deportistas activos, entrenadores y directivos de clubes que renuevan constantemente maderas, gomas, pelotas, mesas e indumentaria oficial.",
+        sec2Title: "2. Alcance y Mercado Objetivo en América",
+        sec2Desc: "El ecosistema del tenis de mesa panamericano abarca 46 Asociaciones Nacionales afiliadas a la Federación Internacional de Tenis de Mesa (ITTF Américas), desde Norteamérica y Centroamérica hasta el Caribe y Sudamérica. Las cifras oficiales de federados muestran un mercado continental en plena expansión:",
+        th1: "Segmento / Región",
+        th2: "Indicador Oficial",
+        th3: "Perfil de Audiencia en la App",
+        td1: "Federaciones nacionales, circuitos juveniles, mayores, máster y paratenis de mesa en todo el continente.",
+        td2: "Principal potencia sudamericana; alta frecuencia de torneos estatales, Copa Brasil y compra de equipamiento técnico.",
+        td3: "Amplia red de clubes privados, ligas universitarias (NCTTA) y torneos sancionados por rating semanal.",
+        td4: "Comunidades competitivas en Argentina, Chile, Colombia, México, Perú, Ecuador, Puerto Rico, Panamá y Centroamérica.",
+        tdTotalLabel: "Base Federada Continental",
+        tdTotalDesc: "Atletas activos con licencia oficial en circuitos nacionales y panamericanos de todo el continente.",
+        sec3Title: "3. Funcionalidades Principales de la Aplicación",
+        sec3Desc: "Una experiencia móvil completa diseñada para acompañar al jugador antes, durante y después de cada competencia:",
+        feat1Title: "📅 Calendario Unificado y Gestión de Torneos",
+        feat1Desc: "Fechas, sedes, categorías y convocatorias de eventos locales, nacionales y circuitos WTT/ITTF en América, con llaves (Grupos + Eliminatoria) y marcadores en tiempo real.",
+        feat2Title: "🌎 Directorio Continental de Clubes y Academias",
+        feat2Desc: "Base de datos verificada de federaciones, asociaciones regionales, salas de entrenamiento y academias con filtros por país/ciudad, horarios y contacto directo para jugadores locales y viajeros.",
+        feat3Title: "🏓 Brand Hubs y Guía de Distribuidores",
+        feat3Desc: "Vitrina comercial organizada por país y marca para facilitar la compra de equipamiento original (maderas, gomas, pelotas, mesas) con respaldo oficial y contacto directo.",
+        feat4Title: "📰 Resultados en Vivo, Noticias y Comunidad",
+        feat4Desc: "Live Ticker de partidos activos, cobertura ágil de campeonatos panamericanos, foro comunitario sobre equipamiento/técnica, galería fotográfica de eventos y minijuego 2.5D.",
+        sec4Title: "4. Formatos de Patrocinio y Activación de Marca",
+        sec4Desc: "Diseñamos integraciones nativas dentro de la experiencia del jugador, evitando publicidad intrusiva y maximizando la recordación de marca.",
+        pkg1Tag: "Presencia Continua",
+        pkg1Title: "Sponsor de Módulo Torneos",
+        pkg1Li1: "Banner oficial integrado en la vista de Torneos y Llaves en vivo.",
+        pkg1Li2: "Enlace directo a tienda oficial, distribuidor regional o catálogo.",
+        pkg1Btn: "Consultar Disponibilidad",
+        pkg2Tag: "⭐ Alianza Estratégica",
+        pkg2Li1: "<strong>Brand Hub Dedicado</strong> dentro de la app con lanzamientos, maderas, gomas y distribuidores por país.",
+        pkg2Li2: "Presencia destacada en la sección de directos.",
+        pkg2Li3: "Etiqueta de Marca Oficial verificada en el Directorio Continental.",
+        pkg2Btn: "Convertirse en Partner",
+        pkg3Tag: "Impacto y Lanzamientos",
+        pkg3Title: "Sponsor Notificaciones Push & Lanzamientos",
+        pkg3Li1: "Presencia en el inicio de la aplicación.",
+        pkg3Li2: "Álbum fotográfico de la galería con branding de la marca.",
+        pkg3Li3: "Envío segmentado por país para anunciar nuevas gomas, maderas, pelotas oficiales y promociones de temporada.",
+        pkg3Btn: "Consultar Disponibilidad",
+        sec5Title: "5. Hoja de Ruta y Lanzamiento (2027)",
+        sec5Desc: "El despliegue técnico de Punto Para Campeonato está estructurado en hitos inmediatos para la temporada 2027, permitiendo a los patrocinadores fundadores asegurar presencia exclusiva desde el primer día:",
+        road1Title: "Lanzamiento Android",
+        road1Desc: "Publicación oficial en Google Play Store (sistema operativo predominante en Latinoamérica) con directorio continental de clubes, calendario Q1 y espacios de patrocinio activos.",
+        road2Title: "Lanzamiento iOS",
+        road2Desc: "Disponibilidad completa en Apple App Store para iPhone y iPad, ampliando la cobertura en Norteamérica y el segmento ejecutivo/competitivo de toda la región.",
+        road3Title: "Expansión Regional",
+        road3Desc: "Integración de cobertura en vivo de campeonatos continentales, notificaciones segmentadas por país y alianzas con distribuidores oficiales por territorio.",
+        contactTitle: "Contacto Comercial y Alianzas",
+        contactDesc: "Proyecto: <strong>Punto Para Campeonato</strong> (Android Enero 2027 | iOS Q1 2027). Escríbenos para reservar espacios de patrocinio fundacional o recibir tarifas por país."
+      },
+      en: {
+        pdfBtn: "📄 Save PDF",
+        heroBadge1: "Media Kit & Sponsorship Proposal 2027",
+        heroBadge2: "Pan-American Table Tennis Ecosystem",
+        heroTitle: "The mobile platform connecting players, clubs, coaches & competitions across the Americas",
+        heroDesc: "Punto Para Campeonato (PPCTT) centralizes in a trilingual app the continental calendar, regional directory of clubs and authorized stores, live scores, and official tournament management.",
+        ctaFormats: "View Sponsorship Formats",
+        ctaContact: "Contact for Partnerships",
+        osAndroidDate: "Jan 2027",
+        kpi1Label: "Federated Athletes",
+        kpi1Sub: "Official ecosystem across ITTF Americas",
+        kpi2Label: "National Associations",
+        kpi2Sub: "North, Central, Caribbean & South America",
+        kpi3Label: "Indexed Entities",
+        kpi3Sub: "Federations, associations, clubs & media",
+        kpi4Val: "3 Languages",
+        kpi4Label: "Spanish • English • Portuguese",
+        kpi4Sub: "Native reach across the entire continent",
+        sec1Title: "1. Overview & Value Proposition",
+        sec1Desc: "Punto Para Campeonato was created to centralize competitive and community table tennis activity across the Americas. While fans and athletes often deal with scattered information across social media, spreadsheets, and local websites, our app brings together the continental calendar, regional directory of clubs and stores, and live tournament tracking in one place.",
+        sec1Callout: "<strong>Opportunity for equipment brands:</strong> Direct positioning in front of a highly targeted audience of active athletes, coaches, and club directors who regularly upgrade blades, rubbers, balls, tables, and official apparel.",
+        sec2Title: "2. Reach & Target Market in the Americas",
+        sec2Desc: "The Pan-American table tennis ecosystem spans 46 National Associations affiliated with the International Table Tennis Federation (ITTF Americas), from North and Central America to the Caribbean and South America. Official figures of registered athletes show a rapidly growing continental market:",
+        th1: "Segment / Region",
+        th2: "Official Metric",
+        th3: "In-App Audience Profile",
+        td1: "National federations, youth, senior, masters, and para table tennis circuits across the continent.",
+        td2: "Leading South American powerhouse; high frequency of state tournaments, Copa Brasil, and technical gear purchases.",
+        td3: "Extensive network of private clubs, collegiate leagues (NCTTA), and weekly rating-sanctioned tournaments.",
+        td4: "Competitive communities in Argentina, Chile, Colombia, Mexico, Peru, Ecuador, Puerto Rico, Panama, and Central America.",
+        tdTotalLabel: "Continental Federated Base",
+        tdTotalDesc: "Active athletes with official licenses across national and Pan-American circuits continent-wide.",
+        sec3Title: "3. Core Application Features",
+        sec3Desc: "A complete mobile experience built to accompany players before, during, and after every competition:",
+        feat1Title: "📅 Unified Calendar & Tournament Engine",
+        feat1Desc: "Dates, venues, divisions, and prospects for local, national, and WTT/ITTF events across the Americas, complete with Groups + Knockout brackets and live scoring.",
+        feat2Title: "🌎 Continental Directory of Clubs & Academies",
+        feat2Desc: "Verified database of federations, regional associations, training halls, and academies with country/city filters, schedules, and direct contact for local and visiting players.",
+        feat3Title: "🏓 Brand Hubs & Authorized Distributors Guide",
+        feat3Desc: "Commercial showcase organized by country and brand to streamline the purchase of authentic equipment (blades, rubbers, balls, tables) with official warranty and direct contact.",
+        feat4Title: "📰 Live Scores, News & Community Hub",
+        feat4Desc: "Live match ticker, fast coverage of Pan-American championships, community forum for gear and technique, event photo galleries, and an integrated 2.5D ping pong minigame.",
+        sec4Title: "4. Sponsorship Formats & Brand Activation",
+        sec4Desc: "We design native integrations inside the player experience, avoiding intrusive ads while maximizing brand recall.",
+        pkg1Tag: "Always-On Presence",
+        pkg1Title: "Tournament Module Sponsor",
+        pkg1Li1: "Official banner integrated in the live Tournaments & Brackets view.",
+        pkg1Li2: "Direct link to your official store, regional distributor, or catalog.",
+        pkg1Btn: "Check Availability",
+        pkg2Tag: "⭐ Strategic Partner",
+        pkg2Li1: "<strong>Dedicated Brand Hub</strong> inside the app showcasing new releases, blades, rubbers, and country distributors.",
+        pkg2Li2: "Featured placement in the live streams section.",
+        pkg2Li3: "Verified Official Brand badge in the Continental Directory.",
+        pkg2Btn: "Become a Partner",
+        pkg3Tag: "Impact & Launches",
+        pkg3Title: "Push Notifications & Launches Sponsor",
+        pkg3Li1: "Featured presence on the app's home screen.",
+        pkg3Li2: "Branded photo gallery album featuring your brand identity.",
+        pkg3Li3: "Country-targeted push alerts to announce new rubbers, blades, official balls, and seasonal promotions.",
+        pkg3Btn: "Check Availability",
+        sec5Title: "5. Roadmap & Launch Schedule (2027)",
+        sec5Desc: "Punto Para Campeonato's technical rollout is structured around immediate milestones for the 2027 season, enabling founding sponsors to secure exclusive presence from day one:",
+        road1Title: "Android Launch",
+        road1Desc: "Official release on Google Play Store (the dominant OS in Latin America) featuring the continental club directory, Q1 calendar, and active sponsorship placements.",
+        road2Title: "iOS Launch",
+        road2Desc: "Full availability on the Apple App Store for iPhone and iPad, expanding reach across North America and the competitive/executive segment region-wide.",
+        road3Title: "Regional Expansion",
+        road3Desc: "Integration of live coverage for continental championships, country-targeted push notifications, and partnerships with official territorial distributors.",
+        contactTitle: "Commercial Contact & Partnerships",
+        contactDesc: "Project: <strong>Punto Para Campeonato</strong> (Android Jan 2027 | iOS Q1 2027). Contact us to reserve founding sponsorship placements or request country rate cards."
+      },
+      pt: {
+        pdfBtn: "📄 Salvar PDF",
+        heroBadge1: "Media Kit & Proposta de Patrocínio 2027",
+        heroBadge2: "Ecossistema Pan-Americano de Tênis de Mesa",
+        heroTitle: "A plataforma móvel que conecta jogadores, clubes, técnicos e competições em toda a América",
+        heroDesc: "O Punto Para Campeonato (PPCTT) centraliza em um aplicativo trilíngue o calendário continental, o diretório regional de clubes e lojas autorizadas, placares ao vivo e gestão de torneios oficiais.",
+        ctaFormats: "Ver Formatos de Patrocínio",
+        ctaContact: "Contato para Parcerias",
+        osAndroidDate: "Jan 2027",
+        kpi1Label: "Atletas Federados",
+        kpi1Sub: "Ecossistema oficial na ITTF Américas",
+        kpi2Label: "Associações Nacionais",
+        kpi2Sub: "América do Norte, Central, Caribe e Sul",
+        kpi3Label: "Entidades Indexadas",
+        kpi3Sub: "Federações, associações, clubes e mídia",
+        kpi4Val: "3 Idiomas",
+        kpi4Label: "Espanhol • Inglês • Português",
+        kpi4Sub: "Alcance nativo em todo o continente",
+        sec1Title: "1. Visão Geral e Proposta de Valor",
+        sec1Desc: "O Punto Para Campeonato nasceu para centralizar a atividade competitiva e comunitária do tênis de mesa no continente americano. Enquanto fãs e atletas encontram informações dispersas em redes sociais, planilhas e portais locais, nosso aplicativo reúne em um só lugar o calendário continental, o diretório regional de clubes e lojas e o acompanhamento de torneios oficiais ao vivo.",
+        sec1Callout: "<strong>Oportunidade para marcas de equipamentos:</strong> Posicionamento direto diante de um público altamente segmentado de atletas ativos, técnicos e dirigentes de clubes que renovam constantemente raquetes, borrachas, bolas, mesas e vestuário oficial.",
+        sec2Title: "2. Alcance e Mercado-Alvo nas Américas",
+        sec2Desc: "O ecossistema do tênis de mesa pan-americano abrange 46 Associações Nacionais filiadas à Federação Internacional de Tênis de Mesa (ITTF Américas), da América do Norte e Central ao Caribe e América do Sul. Os números oficiais de federados mostram um mercado continental em plena expansão:",
+        th1: "Segmento / Região",
+        th2: "Indicador Oficial",
+        th3: "Perfil de Público no App",
+        td1: "Federações nacionais, circuitos juvenis, adultos, máster e paratênis de mesa em todo o continente.",
+        td2: "Principal potência sul-americana; alta frequência de torneios estaduais, Copa Brasil e compra de equipamentos técnicos.",
+        td3: "Ampla rede de clubes privados, ligas universitárias (NCTTA) e torneios sancionados por rating semanal.",
+        td4: "Comunidades competitivas na Argentina, Chile, Colômbia, México, Peru, Equador, Porto Rico, Panamá e América Central.",
+        tdTotalLabel: "Base Federada Continental",
+        tdTotalDesc: "Atletas ativos com licença oficial em circuitos nacionais e pan-americanos de todo o continente.",
+        sec3Title: "3. Funcionalidades Principais do Aplicativo",
+        sec3Desc: "Uma experiência móvel completa projetada para acompanhar o jogador antes, durante e depois de cada competição:",
+        feat1Title: "📅 Calendário Unificado e Gestão de Torneios",
+        feat1Desc: "Datas, sedes, categorias e convocações de eventos locais, nacionais e circuitos WTT/ITTF nas Américas, com chaves (Grupos + Eliminatória) e placares ao vivo.",
+        feat2Title: "🌎 Diretório Continental de Clubes e Academias",
+        feat2Desc: "Base de dados verificada de federações, associações regionais, salas de treino e academias com filtros por país/cidade, horários e contato direto para jogadores locais e viajantes.",
+        feat3Title: "🏓 Brand Hubs e Guia de Distribuidores",
+        feat3Desc: "Vitrine comercial organizada por país e marca para facilitar a compra de equipamentos originais (raquetes, borrachas, bolas, mesas) com respaldo oficial e contato direto.",
+        feat4Title: "📰 Placares ao Vivo, Notícias e Comunidade",
+        feat4Desc: "Live Ticker de partidas ativas, cobertura ágil de campeonatos pan-americanos, fórum comunitário sobre equipamentos/técnica, galeria de fotos de eventos e minijogo 2.5D.",
+        sec4Title: "4. Formatos de Patrocínio e Ativação de Marca",
+        sec4Desc: "Criamos integrações nativas dentro da experiência do jogador, evitando anúncios intrusivos e maximizando a lembrança de marca.",
+        pkg1Tag: "Presença Contínua",
+        pkg1Title: "Patrocinador Módulo Torneios",
+        pkg1Li1: "Banner oficial integrado na tela de Torneios e Chaves ao vivo.",
+        pkg1Li2: "Link direto para loja oficial, distribuidor regional ou catálogo.",
+        pkg1Btn: "Consultar Disponibilidade",
+        pkg2Tag: "⭐ Parceria Estratégica",
+        pkg2Li1: "<strong>Brand Hub Dedicado</strong> no app com lançamentos, raquetes, borrachas e distribuidores por país.",
+        pkg2Li2: "Presença em destaque na seção de transmissões ao vivo.",
+        pkg2Li3: "Selo de Marca Oficial verificada no Diretório Continental.",
+        pkg2Btn: "Tornar-se Parceiro",
+        pkg3Tag: "Impacto e Lançamentos",
+        pkg3Title: "Patrocinador Notificações Push & Lançamentos",
+        pkg3Li1: "Presença na tela inicial do aplicativo.",
+        pkg3Li2: "Álbum de fotos da galeria com identidade visual da marca.",
+        pkg3Li3: "Envio segmentado por país para anunciar novas borrachas, raquetes, bolas oficiais e promoções de temporada.",
+        pkg3Btn: "Consultar Disponibilidade",
+        sec5Title: "5. Roteiro e Lançamento (2027)",
+        sec5Desc: "A implantação técnica do Punto Para Campeonato está estruturada em marcos imediatos para a temporada 2027, permitindo aos patrocinadores fundadores garantir presença exclusiva desde o primeiro dia:",
+        road1Title: "Lançamento Android",
+        road1Desc: "Publicação oficial na Google Play Store (sistema operacional predominante na América Latina) com diretório continental de clubes, calendário Q1 e espaços de patrocínio ativos.",
+        road2Title: "Lançamento iOS",
+        road2Desc: "Disponibilidade completa na Apple App Store para iPhone e iPad, ampliando a cobertura na América do Norte e no segmento executivo/competitivo de toda a região.",
+        road3Title: "Expansão Regional",
+        road3Desc: "Integração de cobertura ao vivo de campeonatos continentais, notificações segmentadas por país e parcerias com distribuidores oficiais por território.",
+        contactTitle: "Contato Comercial e Parcerias",
+        contactDesc: "Projeto: <strong>Punto Para Campeonato</strong> (Android Jan 2027 | iOS Q1 2027). Entre em contato para reservar espaços de patrocínio fundador ou receber tabelas por país."
+      }
+    };
+
+    function setLang(lang, btn) {
+      const dict = i18n[lang];
+      if (!dict) return;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.innerHTML = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
