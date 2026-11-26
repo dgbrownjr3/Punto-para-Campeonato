@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Media Kit & Sponsorships — Punto Para Campeonato (PPCTT)</title>
-  <meta name="description" content="Media Kit oficial y oportunidades de patrocinio de Punto Para Campeonato (PPCTT), el ecosistema digital del tenis de mesa en América." />
+  <title>Media Kit & Propuesta de Patrocinio 2027 — Punto Para Campeonato (PPCTT)</title>
+  <meta name="description" content="Media Kit oficial y propuesta de patrocinio 2027 de Punto Para Campeonato (PPCTT). Conectamos marcas líderes con más de 60,000 federados y 150,000 jugadores de tenis de mesa en América." />
   <link rel="icon" type="image/png" href="/logo.png" />
   <style>
     :root {
@@ -35,7 +35,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.62;
       padding-bottom: 4rem;
     }
 
@@ -59,7 +59,7 @@
     }
 
     .nav-container {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 0.85rem 1.25rem;
       display: flex;
@@ -135,18 +135,18 @@
 
     /* Main */
     main {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 2rem 1.25rem 0;
     }
 
     /* Hero */
     .hero {
-      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 55%),
+      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), transparent 55%),
                   linear-gradient(135deg, var(--surface) 0%, #0b1324 100%);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 2.4rem 2rem;
+      padding: 2.35rem 2rem;
       margin-bottom: 1.75rem;
     }
 
@@ -175,16 +175,16 @@
     }
 
     .hero h1 {
-      font-size: clamp(1.8rem, 3.8vw, 2.55rem);
-      line-height: 1.2;
+      font-size: clamp(1.75rem, 3.6vw, 2.45rem);
+      line-height: 1.22;
       margin-bottom: 0.9rem;
       color: #ffffff;
     }
 
     .hero p {
       color: #cbd5e1;
-      max-width: 780px;
-      font-size: 1.05rem;
+      max-width: 820px;
+      font-size: 1.03rem;
       margin-bottom: 1.5rem;
     }
 
@@ -202,7 +202,7 @@
       font-size: 0.92rem;
       padding: 0.7rem 1.35rem;
       border-radius: 11px;
-      transition: transform 0.15s ease, opacity 0.2s;
+      transition: opacity 0.2s;
     }
 
     .btn-primary:hover {
@@ -229,7 +229,7 @@
     /* KPI Grid */
     .kpi-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
       margin-bottom: 1.75rem;
     }
@@ -249,15 +249,19 @@
       margin-bottom: 0.35rem;
     }
 
+    .kpi-card.highlight .kpi-value {
+      color: var(--gold);
+    }
+
     .kpi-label {
-      font-size: 0.92rem;
-      font-weight: 600;
+      font-size: 0.94rem;
+      font-weight: 700;
       color: #ffffff;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.25rem;
     }
 
     .kpi-sub {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--muted);
     }
 
@@ -281,12 +285,79 @@
       margin-bottom: 1rem;
     }
 
-    /* Two-column layout */
-    .two-col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.25rem;
+    .callout {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 0.95rem 1.15rem;
+      border-radius: 0 12px 12px 0;
       margin-top: 0.75rem;
+      font-size: 0.94rem;
+      color: #e2e8f0;
+    }
+
+    /* Responsive Data Tables */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--surface-alt);
+      color: var(--accent);
+      font-weight: 700;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr.total-row td {
+      background: rgba(56, 189, 248, 0.08);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .badge-inline {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .badge-inline.gold {
+      background: var(--gold-soft);
+      color: var(--gold);
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.1rem;
+      margin-top: 0.85rem;
     }
 
     .feature-box {
@@ -297,9 +368,12 @@
     }
 
     .feature-box h3 {
-      font-size: 1.05rem;
+      font-size: 1.04rem;
       color: #ffffff;
       margin-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .feature-box p {
@@ -308,72 +382,23 @@
       margin-bottom: 0;
     }
 
-    /* Packages Grid */
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1rem;
-    }
-
-    .pkg-card {
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .pkg-card.featured {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.25);
-    }
-
-    .pkg-tag {
-      font-size: 0.74rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
-    }
-
-    .pkg-card.featured .pkg-tag {
-      color: var(--gold);
-    }
-
-    .pkg-card h3 {
-      font-size: 1.2rem;
-      color: #ffffff;
-      margin-bottom: 0.65rem;
-    }
-
-    .pkg-card ul {
-      padding-left: 1.2rem;
-      color: #cbd5e1;
-      font-size: 0.9rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .pkg-card li {
-      margin-bottom: 0.45rem;
-    }
-
     /* Roadmap */
     .roadmap-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1rem;
-      margin-top: 0.75rem;
+      margin-top: 0.85rem;
     }
 
     .road-step {
       background: var(--surface-alt);
       border-left: 3px solid var(--accent);
       border-radius: 0 12px 12px 0;
-      padding: 1rem 1.15rem;
+      padding: 1.1rem 1.2rem;
+    }
+
+    .road-step.featured {
+      border-left-color: var(--gold);
     }
 
     .road-date {
@@ -384,14 +409,18 @@
       margin-bottom: 0.25rem;
     }
 
+    .road-step.featured .road-date {
+      color: var(--gold);
+    }
+
     .road-step h4 {
-      font-size: 0.98rem;
+      font-size: 1rem;
       color: #ffffff;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.35rem;
     }
 
     .road-step p {
-      font-size: 0.85rem;
+      font-size: 0.87rem;
       color: var(--muted);
       margin-bottom: 0;
     }
@@ -411,7 +440,7 @@
 
     .contact-banner h2 {
       font-size: 1.4rem;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
       color: #ffffff;
     }
 
@@ -425,11 +454,11 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      font-size: 0.92rem;
+      font-size: 0.94rem;
     }
 
     footer {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 2.5rem auto 0;
       padding: 1.5rem 1.25rem 0;
       border-top: 1px solid var(--border);
@@ -479,20 +508,24 @@
       header, .cta-row, footer {
         display: none !important;
       }
-      .hero, .kpi-card, section.kit-section, .feature-box, .pkg-card, .road-step, .contact-banner {
+      .hero, .kpi-card, section.kit-section, .feature-box, .road-step, .contact-banner {
         background: #f8fafc !important;
         color: #0f172a !important;
         border: 1px solid #cbd5e1 !important;
         box-shadow: none !important;
         break-inside: avoid;
       }
-      .hero h1, section.kit-section h2, .kpi-label, .feature-box h3, .pkg-card h3, .road-step h4, .contact-banner h2 {
+      .hero h1, section.kit-section h2, .kpi-label, .feature-box h3, .road-step h4, .contact-banner h2 {
         color: #0f172a !important;
       }
-      .hero p, section.kit-section p, .pkg-card ul, .contact-banner p {
+      .hero p, section.kit-section p, td, .contact-banner p {
         color: #334155 !important;
       }
-      .kpi-value, .pkg-tag, .road-date {
+      th {
+        background: #e2e8f0 !important;
+        color: #0f172a !important;
+      }
+      .kpi-value, .road-date {
         color: #0284c7 !important;
       }
     }
@@ -526,9 +559,9 @@
     <div class="hero">
       <div class="pill-row">
         <span class="badge">
-          <span data-lang="es">Media Kit Oficial 2026–2027</span>
-          <span data-lang="en">Official Media Kit 2026–2027</span>
-          <span data-lang="pt">Media Kit Oficial 2026–2027</span>
+          <span data-lang="es">Media Kit & Propuesta de Patrocinio 2027</span>
+          <span data-lang="en">Media Kit & Sponsorship Proposal 2027</span>
+          <span data-lang="pt">Media Kit & Proposta de Patrocínio 2027</span>
         </span>
         <span class="badge gold">
           <span data-lang="es">Ecosistema Panamericano de Tenis de Mesa</span>
@@ -537,42 +570,70 @@
         </span>
       </div>
       <h1>
-        <span data-lang="es">Conectamos marcas líderes con los jugadores, clubes y torneos de América</span>
-        <span data-lang="en">Connecting leading brands with table tennis players, clubs & tournaments across the Americas</span>
-        <span data-lang="pt">Conectamos marcas líderes aos jogadores, clubes e torneios das Américas</span>
+        <span data-lang="es">La plataforma móvil que conecta a jugadores, clubes, entrenadores y competiciones en toda América</span>
+        <span data-lang="en">The mobile platform connecting players, clubs, coaches & competitions across the Americas</span>
+        <span data-lang="pt">A plataforma móvel que conecta jogadores, clubes, técnicos e competições em toda a América</span>
       </h1>
       <p>
-        <span data-lang="es">Punto Para Campeonato (PPCTT) combina una plataforma móvil trilingüe (ES / EN / PT) de resultados en vivo, gestión de torneos y directorio continental con una comunidad digital altamente segmentada de atletas, entrenadores y directivos.</span>
-        <span data-lang="en">Punto Para Campeonato (PPCTT) combines a trilingual (ES / EN / PT) mobile app for live scores, tournament brackets, and a continental directory with a highly targeted digital community of athletes, coaches, and organizers.</span>
-        <span data-lang="pt">O Punto Para Campeonato (PPCTT) combina um aplicativo móvel trilíngue (ES / EN / PT) de placares ao vivo, gestão de torneios e diretório continental com uma comunidade digital altamente segmentada de atletas, técnicos e dirigentes.</span>
+        <span data-lang="es">Punto Para Campeonato (PPCTT) centraliza en una aplicación trilingüe (ES / EN / PT) el calendario continental, el directorio regional de clubes y tiendas autorizadas, marcadores en vivo y gestión de torneos oficiales.</span>
+        <span data-lang="en">Punto Para Campeonato (PPCTT) centralizes in a trilingual (ES / EN / PT) app the continental calendar, regional directory of clubs and authorized stores, live scores, and official tournament management.</span>
+        <span data-lang="pt">O Punto Para Campeonato (PPCTT) centraliza em um aplicativo trilíngue (ES / EN / PT) o calendário continental, o diretório regional de clubes e lojas autorizadas, placares ao vivo e gestão de torneios oficiais.</span>
       </p>
       <div class="cta-row">
-        <a href="#paquetes" class="btn-primary">
-          <span data-lang="es">Ver Espacios de Patrocinio</span>
-          <span data-lang="en">View Sponsorship Packages</span>
-          <span data-lang="pt">Ver Pacotes de Patrocínio</span>
+        <a href="#formatos" class="btn-primary">
+          <span data-lang="es">Ver Formatos de Patrocinio</span>
+          <span data-lang="en">View Sponsorship Formats</span>
+          <span data-lang="pt">Ver Formatos de Patrocínio</span>
         </a>
         <a href="#contacto" class="btn-secondary">
-          <span data-lang="es">Solicitar Propuesta Personalizada</span>
-          <span data-lang="en">Request Custom Proposal</span>
-          <span data-lang="pt">Solicitar Proposta Personalizada</span>
+          <span data-lang="es">Contactar para Alianzas</span>
+          <span data-lang="en">Contact for Partnerships</span>
+          <span data-lang="pt">Contato para Parcerias</span>
         </a>
       </div>
     </div>
 
     <!-- KPIs -->
     <div class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-value">42+</div>
+      <div class="kpi-card highlight">
+        <div class="kpi-value">60,000+</div>
         <div class="kpi-label">
-          <span data-lang="es">Países y Territorios</span>
-          <span data-lang="en">Countries & Territories</span>
-          <span data-lang="pt">Países e Territórios</span>
+          <span data-lang="es">Atletas Federados</span>
+          <span data-lang="en">Federated Athletes</span>
+          <span data-lang="pt">Atletas Federados</span>
         </div>
         <div class="kpi-sub">
-          <span data-lang="es">Cobertura continental en América</span>
-          <span data-lang="en">Continental coverage across the Americas</span>
-          <span data-lang="pt">Cobertura continental nas Américas</span>
+          <span data-lang="es">Ecosistema oficial en ITTF Américas</span>
+          <span data-lang="en">Official ecosystem across ITTF Americas</span>
+          <span data-lang="pt">Ecossistema oficial na ITTF Américas</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-value">150,000+</div>
+        <div class="kpi-label">
+          <span data-lang="es">Jugadores de Club y Ligas</span>
+          <span data-lang="en">Club & League Players</span>
+          <span data-lang="pt">Jogadores de Clubes e Ligas</span>
+        </div>
+        <div class="kpi-sub">
+          <span data-lang="es">Practicantes activos en torneos abiertos</span>
+          <span data-lang="en">Active players in open leagues & tournaments</span>
+          <span data-lang="pt">Praticantes ativos em ligas e torneios abertos</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-value">46</div>
+        <div class="kpi-label">
+          <span data-lang="es">Asociaciones Nacionales</span>
+          <span data-lang="en">National Associations</span>
+          <span data-lang="pt">Associações Nacionais</span>
+        </div>
+        <div class="kpi-sub">
+          <span data-lang="es">Norte, Centro, Caribe y Sudamérica</span>
+          <span data-lang="en">North, Central, Caribbean & South America</span>
+          <span data-lang="pt">América do Norte, Central, Caribe e Sul</span>
         </div>
       </div>
 
@@ -584,263 +645,324 @@
           <span data-lang="pt">Entidades Indexadas</span>
         </div>
         <div class="kpi-sub">
-          <span data-lang="es">Federaciones, asociaciones, ligas y clubes</span>
-          <span data-lang="en">Federations, associations, leagues & clubs</span>
-          <span data-lang="pt">Federações, associações, ligas e clubes</span>
-        </div>
-      </div>
-
-      <div class="kpi-card">
-        <div class="kpi-value">3 Idiomas</div>
-        <div class="kpi-label">
-          <span data-lang="es">Español • Inglés • Portugués</span>
-          <span data-lang="en">Spanish • English • Portuguese</span>
-          <span data-lang="pt">Espanhol • Inglês • Português</span>
-        </div>
-        <div class="kpi-sub">
-          <span data-lang="es">Alcance nativo en todo el continente</span>
-          <span data-lang="en">Native reach across the entire continent</span>
-          <span data-lang="pt">Alcance nativo em todo o continente</span>
-        </div>
-      </div>
-
-      <div class="kpi-card">
-        <div class="kpi-value">100%</div>
-        <div class="kpi-label">
-          <span data-lang="es">Audiencia de Nicho Activa</span>
-          <span data-lang="en">Active Niche Audience</span>
-          <span data-lang="pt">Público de Nicho Ativo</span>
-        </div>
-        <div class="kpi-sub">
-          <span data-lang="es">Compradores reales de equipamiento TT</span>
-          <span data-lang="en">Active buyers of table tennis equipment</span>
-          <span data-lang="pt">Compradores reais de equipamentos de TM</span>
+          <span data-lang="es">Federaciones, asociaciones, clubes y medios</span>
+          <span data-lang="en">Federations, associations, clubs & media</span>
+          <span data-lang="pt">Federações, associações, clubes e mídia</span>
         </div>
       </div>
     </div>
 
-    <!-- AUDIENCE & VALUE -->
+    <!-- 1. VISION & VALUE -->
     <section class="kit-section">
       <h2>
-        <span data-lang="es">Nuestra Audiencia y Propuesta de Valor</span>
-        <span data-lang="en">Our Audience & Value Proposition</span>
-        <span data-lang="pt">Nosso Público e Proposta de Valor</span>
+        <span data-lang="es">1. Visión General y Propuesta de Valor</span>
+        <span data-lang="en">1. Overview & Value Proposition</span>
+        <span data-lang="pt">1. Visão Geral e Proposta de Valor</span>
       </h2>
       <p>
-        <span data-lang="es">A diferencia de los medios deportivos genéricos, cada usuario de Punto Para Campeonato participa activamente en el circuito: compite, entrena en clubes, compra maderas y gomas con frecuencia u organiza torneos oficiales.</span>
-        <span data-lang="en">Unlike generic sports media, every Punto Para Campeonato user actively participates in the circuit: competing, training at clubs, regularly purchasing blades and rubbers, or organizing official tournaments.</span>
-        <span data-lang="pt">Ao contrário da mídia esportiva genérica, cada usuário do Punto Para Campeonato participa ativamente do circuito: compete, treina em clubes, compra raquetes e borrachas com frequência ou organiza torneios oficiais.</span>
+        <span data-lang="es">Punto Para Campeonato nace para centralizar la actividad competitiva y comunitaria del tenis de mesa en el continente americano. Mientras los aficionados y atletas suelen encontrar información dispersa entre redes sociales, hojas de cálculo y portales locales, nuestra aplicación reúne en un solo lugar el calendario continental, el directorio regional de clubes y tiendas, y el seguimiento de torneos oficiales en tiempo real.</span>
+        <span data-lang="en">Punto Para Campeonato was created to centralize competitive and community table tennis activity across the Americas. While fans and athletes often deal with scattered information across social media, spreadsheets, and local websites, our app brings together the continental calendar, regional directory of clubs and stores, and live tournament tracking in one place.</span>
+        <span data-lang="pt">O Punto Para Campeonato nasceu para centralizar a atividade competitiva e comunitária do tênis de mesa no continente americano. Enquanto fãs e atletas encontram informações dispersas em redes sociais, planilhas e portais locais, nosso aplicativo reúne em um só lugar o calendário continental, o diretório regional de clubes e lojas e o acompanhamento de torneios oficiais ao vivo.</span>
       </p>
-      <div class="two-col">
+      <div class="callout">
+        <span data-lang="es"><strong>Oportunidad para marcas de equipamiento:</strong> Posicionamiento directo frente a una audiencia altamente segmentada de deportistas activos, entrenadores y directivos de clubes que renuevan constantemente maderas, gomas, pelotas, mesas e indumentaria oficial.</span>
+        <span data-lang="en"><strong>Opportunity for equipment brands:</strong> Direct positioning in front of a highly targeted audience of active athletes, coaches, and club directors who regularly upgrade blades, rubbers, balls, tables, and official apparel.</span>
+        <span data-lang="pt"><strong>Oportunidade para marcas de equipamentos:</strong> Posicionamento direto diante de um público altamente segmentado de atletas ativos, técnicos e dirigentes de clubes que renovam constantemente raquetes, borrachas, bolas, mesas e vestuário oficial.</span>
+      </div>
+    </section>
+
+    <!-- 2. REACH & TARGET MARKET -->
+    <section class="kit-section">
+      <h2>
+        <span data-lang="es">2. Alcance y Mercado Objetivo en América</span>
+        <span data-lang="en">2. Reach & Target Market in the Americas</span>
+        <span data-lang="pt">2. Alcance e Mercado-Alvo nas Américas</span>
+      </h2>
+      <p>
+        <span data-lang="es">El ecosistema del tenis de mesa panamericano abarca 46 Asociaciones Nacionales afiliadas a la Federación Internacional de Tenis de Mesa (ITTF Américas), desde Norteamérica y Centroamérica hasta el Caribe y Sudamérica. Las cifras oficiales de federados y practicantes activos muestran un mercado continental en plena expansión:</span>
+        <span data-lang="en">The Pan-American table tennis ecosystem spans 46 National Associations affiliated with the International Table Tennis Federation (ITTF Americas), from North and Central America to the Caribbean and South America. Official figures of registered athletes and active players show a rapidly growing continental market:</span>
+        <span data-lang="pt">O ecossistema do tênis de mesa pan-americano abrange 46 Associações Nacionais filiadas à Federação Internacional de Tênis de Mesa (ITTF Américas), da América do Norte e Central ao Caribe e América do Sul. Os números oficiais de federados e praticantes ativos mostram um mercado continental em plena expansão:</span>
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <span data-lang="es">Segmento / Región</span>
+                <span data-lang="en">Segment / Region</span>
+                <span data-lang="pt">Segmento / Região</span>
+              </th>
+              <th>
+                <span data-lang="es">Indicador Oficial</span>
+                <span data-lang="en">Official Metric</span>
+                <span data-lang="pt">Indicador Oficial</span>
+              </th>
+              <th>
+                <span data-lang="es">Perfil de Audiencia en la App</span>
+                <span data-lang="en">In-App Audience Profile</span>
+                <span data-lang="pt">Perfil de Público no App</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ITTF Américas (Continental)</strong></td>
+              <td><span class="badge-inline">46 Asociaciones</span></td>
+              <td>
+                <span data-lang="es">Federaciones nacionales, circuitos juveniles, mayores, máster y paratenis de mesa en todo el continente.</span>
+                <span data-lang="en">National federations, youth, senior, masters, and para table tennis circuits across the continent.</span>
+                <span data-lang="pt">Federações nacionais, circuitos juvenis, adultos, máster e paratênis de mesa em todo o continente.</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Brasil (CBTM)</strong></td>
+              <td><span class="badge-inline">~20,000+ federados</span></td>
+              <td>
+                <span data-lang="es">Principal potencia sudamericana; alta frecuencia de torneos estatales, Copa Brasil y compra de equipamiento técnico.</span>
+                <span data-lang="en">Leading South American powerhouse; high frequency of state tournaments, Copa Brasil, and technical gear purchases.</span>
+                <span data-lang="pt">Principal potência sul-americana; alta frequência de torneios estaduais, Copa Brasil e compra de equipamentos técnicos.</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Estados Unidos y Canadá (USATT / TTCAN)</strong></td>
+              <td><span class="badge-inline">~15,000+ miembros activos</span></td>
+              <td>
+                <span data-lang="es">Amplia red de clubes privados, ligas universitarias (NCTTA) y torneos sancionados por rating semanal.</span>
+                <span data-lang="en">Extensive network of private clubs, collegiate leagues (NCTTA), and weekly rating-sanctioned tournaments.</span>
+                <span data-lang="pt">Ampla rede de clubes privados, ligas universitárias (NCTTA) e torneios sancionados por rating semanal.</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Hispanoamérica y Caribe</strong></td>
+              <td><span class="badge-inline">~25,000+ federados est.</span></td>
+              <td>
+                <span data-lang="es">Comunidades competitivas en Argentina, Chile, Colombia, México, Perú, Ecuador, Puerto Rico, Panamá y Centroamérica.</span>
+                <span data-lang="en">Competitive communities in Argentina, Chile, Colombia, Mexico, Peru, Ecuador, Puerto Rico, Panama, and Central America.</span>
+                <span data-lang="pt">Comunidades competitivas na Argentina, Chile, Colômbia, México, Peru, Equador, Porto Rico, Panamá e América Central.</span>
+              </td>
+            </tr>
+            <tr class="total-row">
+              <td>
+                <span data-lang="es">Ecosistema Total Direccionable</span>
+                <span data-lang="en">Total Addressable Ecosystem</span>
+                <span data-lang="pt">Ecossistema Total Endereçável</span>
+              </td>
+              <td><span class="badge-inline gold">60,000+ federados</span></td>
+              <td>
+                <span data-lang="es">Sumado a más de 150,000 jugadores de club y recreativos que participan en ligas abiertas y torneos locales.</span>
+                <span data-lang="en">Plus over 150,000 club and recreational players competing in open leagues and local tournaments.</span>
+                <span data-lang="pt">Somado a mais de 150.000 jogadores de clubes e recreativos que participam de ligas abertas e torneios locais.</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. CORE APP FEATURES -->
+    <section class="kit-section">
+      <h2>
+        <span data-lang="es">3. Funcionalidades Principales de la Aplicación</span>
+        <span data-lang="en">3. Core Application Features</span>
+        <span data-lang="pt">3. Funcionalidades Principais do Aplicativo</span>
+      </h2>
+      <p>
+        <span data-lang="es">Una experiencia móvil completa diseñada para acompañar al jugador antes, durante y después de cada competencia:</span>
+        <span data-lang="en">A complete mobile experience built to accompany players before, during, and after every competition:</span>
+        <span data-lang="pt">Uma experiência móvel completa projetada para acompanhar o jogador antes, durante e depois de cada competição:</span>
+      </p>
+
+      <div class="features-grid">
         <div class="feature-box">
           <h3>
-            <span data-lang="es">🎯 Perfil del Usuario</span>
-            <span data-lang="en">🎯 User Profile</span>
-            <span data-lang="pt">🎯 Perfil do Usuário</span>
+            <span>📅</span>
+            <span data-lang="es">Calendario Unificado y Gestión de Torneos</span>
+            <span data-lang="en">Unified Calendar & Tournament Engine</span>
+            <span data-lang="pt">Calendário Unificado e Gestão de Torneios</span>
           </h3>
           <p>
-            <span data-lang="es">Jugadores federados y amateurs (Sub-11 a Máster), entrenadores de academias, árbitros y directivos de asociaciones regionales en Latinoamérica, EE. UU. y Canadá.</span>
-            <span data-lang="en">Federated and amateur players (U-11 to Masters), academy coaches, umpires, and regional association directors across Latin America, the US, and Canada.</span>
-            <span data-lang="pt">Jogadores federados e amadores (Sub-11 a Máster), treinadores de academias, árbitros e dirigentes de associações regionais na América Latina, EUA e Canadá.</span>
+            <span data-lang="es">Fechas, sedes, categorías y convocatorias de eventos locales, nacionales y circuitos WTT/ITTF en América, con llaves (Grupos + Eliminatoria) y marcadores en tiempo real.</span>
+            <span data-lang="en">Dates, venues, divisions, and prospects for local, national, and WTT/ITTF events across the Americas, complete with Groups + Knockout brackets and live scoring.</span>
+            <span data-lang="pt">Datas, sedes, categorias e convocações de eventos locais, nacionais e circuitos WTT/ITTF nas Américas, com chaves (Grupos + Eliminatória) e placares ao vivo.</span>
           </p>
         </div>
+
         <div class="feature-box">
           <h3>
-            <span data-lang="es">📱 Ecosistema Multiplataforma</span>
-            <span data-lang="en">📱 Multi-Platform Ecosystem</span>
-            <span data-lang="pt">📱 Ecossistema Multiplataforma</span>
+            <span>🌎</span>
+            <span data-lang="es">Directorio Continental de Clubes y Academias</span>
+            <span data-lang="en">Continental Directory of Clubs & Academies</span>
+            <span data-lang="pt">Diretório Continental de Clubes e Academias</span>
           </h3>
           <p>
-            <span data-lang="es">Integración directa entre la aplicación móvil (marcadores en vivo, llaves de torneo, foro, galería) y nuestra red social @puntoparacampeonato con cobertura audiovisual.</span>
-            <span data-lang="en">Seamless integration between our mobile app (live scores, tournament brackets, forum, photo gallery) and our @puntoparacampeonato social channel with audiovisual coverage.</span>
-            <span data-lang="pt">Integração direta entre o aplicativo móvel (placares ao vivo, chaves de torneio, fórum, galeria) e nossa rede social @puntoparacampeonato com cobertura audiovisual.</span>
+            <span data-lang="es">Base de datos verificada de federaciones, asociaciones regionales, salas de entrenamiento y academias con filtros por país/ciudad, horarios y contacto directo para jugadores locales y viajeros.</span>
+            <span data-lang="en">Verified database of federations, regional associations, training halls, and academies with country/city filters, schedules, and direct contact for local and visiting players.</span>
+            <span data-lang="pt">Base de dados verificada de federações, associações regionais, salas de treino e academias com filtros por país/cidade, horários e contato direto para jogadores locais e viajantes.</span>
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <h3>
+            <span>🏓</span>
+            <span data-lang="es">Brand Hubs y Guía de Distribuidores</span>
+            <span data-lang="en">Brand Hubs & Authorized Distributors Guide</span>
+            <span data-lang="pt">Brand Hubs e Guia de Distribuidores</span>
+          </h3>
+          <p>
+            <span data-lang="es">Vitrina comercial organizada por país y marca para facilitar la compra de equipamiento original (maderas, gomas, pelotas, mesas) con respaldo oficial y contacto directo.</span>
+            <span data-lang="en">Commercial showcase organized by country and brand to streamline the purchase of authentic equipment (blades, rubbers, balls, tables) with official warranty and direct contact.</span>
+            <span data-lang="pt">Vitrine comercial organizada por país e marca para facilitar a compra de equipamentos originais (raquetes, borrachas, bolas, mesas) com respaldo oficial e contato direto.</span>
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <h3>
+            <span>📰</span>
+            <span data-lang="es">Resultados en Vivo, Noticias y Comunidad</span>
+            <span data-lang="en">Live Scores, News & Community Hub</span>
+            <span data-lang="pt">Placares ao Vivo, Notícias e Comunidade</span>
+          </h3>
+          <p>
+            <span data-lang="es">Live Ticker de partidos activos, cobertura ágil de campeonatos panamericanos, foro comunitario sobre equipamiento/técnica, galería fotográfica de eventos y minijuego 2.5D.</span>
+            <span data-lang="en">Live match ticker, fast coverage of Pan-American championships, community forum for gear and technique, event photo galleries, and an integrated 2.5D ping pong minigame.</span>
+            <span data-lang="pt">Live Ticker de partidas ativas, cobertura ágil de campeonatos pan-americanos, fórum comunitário sobre equipamentos/técnica, galeria de fotos de eventos e minijogo 2.5D.</span>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SPONSORSHIP PACKAGES -->
-    <section id="paquetes" class="kit-section">
-      <h2>
-        <span data-lang="es">Formatos de Patrocinio y Activación de Marca</span>
-        <span data-lang="en">Sponsorship Formats & Brand Activation</span>
-        <span data-lang="pt">Formatos de Patrocínio e Ativação de Marca</span>
-      </h2>
-      <p>
-        <span data-lang="es">Diseñamos integraciones nativas dentro de la experiencia del jugador, evitando publicidad intrusiva y maximizando la recordación de marca.</span>
-        <span data-lang="en">We design native integrations inside the player experience, avoiding intrusive ads while maximizing brand recall and conversion.</span>
-        <span data-lang="pt">Criamos integrações nativas dentro da experiência do jogador, evitando anúncios intrusivos e maximizando a lembrança de marca.</span>
-      </p>
-
-      <div class="packages-grid">
-        <!-- Tier 1 -->
-        <div class="pkg-card">
-          <div>
-            <div class="pkg-tag">
-              <span data-lang="es">Presencia Continua</span>
-              <span data-lang="en">Always-On Presence</span>
-              <span data-lang="pt">Presença Contínua</span>
-            </div>
-            <h3>
-              <span data-lang="es">Sponsor de Módulo Torneos</span>
-              <span data-lang="en">Tournament Module Sponsor</span>
-              <span data-lang="pt">Patrocinador Módulo Torneios</span>
-            </h3>
-            <ul data-lang="es">
-              <li>Banner oficial integrado en la vista de Torneos y Llaves en vivo.</li>
-              <li>Enlace directo a tienda oficial, distribuidor regional o catálogo.</li>
-              <li>Visibilidad permanente durante eventos nacionales e internacionales.</li>
-              <li>Mención mensual en publicaciones de resultados en Instagram.</li>
-            </ul>
-            <ul data-lang="en">
-              <li>Official banner integrated in the live Tournaments & Brackets view.</li>
-              <li>Direct link to your official store, regional distributor, or catalog.</li>
-              <li>Continuous visibility during national and international events.</li>
-              <li>Monthly brand mention in Instagram tournament recap posts.</li>
-            </ul>
-            <ul data-lang="pt">
-              <li>Banner oficial integrado na tela de Torneios e Chaves ao vivo.</li>
-              <li>Link direto para loja oficial, distribuidor regional ou catálogo.</li>
-              <li>Visibilidade permanente durante eventos nacionais e internacionais.</li>
-              <li>Menção mensal nas publicações de resultados no Instagram.</li>
-            </ul>
-          </div>
-          <a href="#contacto" class="btn-secondary" style="text-align:center;">
-            <span data-lang="es">Consultar Disponibilidad</span>
-            <span data-lang="en">Check Availability</span>
-            <span data-lang="pt">Consultar Disponibilidade</span>
-          </a>
-        </div>
-
-        <!-- Tier 2 (Featured) -->
-        <div class="pkg-card featured">
-          <div>
-            <div class="pkg-tag">
-              <span data-lang="es">⭐ Alianza Estratégica</span>
-              <span data-lang="en">⭐ Strategic Partner</span>
-              <span data-lang="pt">⭐ Parceria Estratégica</span>
-            </div>
-            <h3>
-              <span data-lang="es">Official Brand Hub + Cobertura</span>
-              <span data-lang="en">Official Brand Hub + Coverage</span>
-              <span data-lang="pt">Official Brand Hub + Cobertura</span>
-            </h3>
-            <ul data-lang="es">
-              <li><strong>Brand Hub Dedicado</strong> dentro de la app con lanzamientos, maderas, gomas y distribuidores por país.</li>
-              <li>Presencia destacada en el Live Ticker de resultados en tiempo real.</li>
-              <li>Videos promocionales verticales (Reels / Shorts) en @puntoparacampeonato.</li>
-              <li>Etiqueta de Marca Oficial verificada en el Directorio Continental.</li>
-            </ul>
-            <ul data-lang="en">
-              <li><strong>Dedicated Brand Hub</strong> inside the app showcasing new releases, blades, rubbers, and country distributors.</li>
-              <li>Featured placement in the real-time Live Match Ticker.</li>
-              <li>Vertical promotional videos (Reels / Shorts) on @puntoparacampeonato.</li>
-              <li>Verified Official Brand badge in the Continental Directory.</li>
-            </ul>
-            <ul data-lang="pt">
-              <li><strong>Brand Hub Dedicado</strong> no app com lançamentos, raquetes, borrachas e distribuidores por país.</li>
-              <li>Presença em destaque no Live Ticker de resultados em tempo real.</li>
-              <li>Vídeos promocionais verticais (Reels / Shorts) no @puntoparacampeonato.</li>
-              <li>Selo de Marca Oficial verificada no Diretório Continental.</li>
-            </ul>
-          </div>
-          <a href="#contacto" class="btn-primary" style="text-align:center;">
-            <span data-lang="es">Convertirse en Partner</span>
-            <span data-lang="en">Become a Partner</span>
-            <span data-lang="pt">Tornar-se Parceiro</span>
-          </a>
-        </div>
-
-        <!-- Tier 3 -->
-        <div class="pkg-card">
-          <div>
-            <div class="pkg-tag">
-              <span data-lang="es">Activación por Evento</span>
-              <span data-lang="en">Event Activation</span>
-              <span data-lang="pt">Ativação por Evento</span>
-            </div>
-            <h3>
-              <span data-lang="es">Naming Rights de Torneo / Copa</span>
-              <span data-lang="en">Tournament / Cup Naming Rights</span>
-              <span data-lang="pt">Naming Rights de Torneio / Copa</span>
-            </h3>
-            <ul data-lang="es">
-              <li>Patrocinio titular de torneos oficiales gestionados en la app.</li>
-              <li>Álbum fotográfico oficial de la galería con branding de la marca.</li>
-              <li>Activación de sorteos o pruebas de material con la comunidad.</li>
-              <li>Reporte post-evento con alcance, impresiones e interacción.</li>
-            </ul>
-            <ul data-lang="en">
-              <li>Title sponsorship of official tournaments managed on the platform.</li>
-              <li>Official photo gallery album featuring your brand identity.</li>
-              <li>Community giveaways or equipment demo activations.</li>
-              <li>Post-event report with reach, impressions, and engagement metrics.</li>
-            </ul>
-            <ul data-lang="pt">
-              <li>Patrocínio máster de torneios oficiais gerenciados no aplicativo.</li>
-              <li>Álbum de fotos oficial na galeria com identidade visual da marca.</li>
-              <li>Ativação de sorteios ou testes de equipamentos com a comunidade.</li>
-              <li>Relatório pós-evento com alcance, impressões e engajamento.</li>
-            </ul>
-          </div>
-          <a href="#contacto" class="btn-secondary" style="text-align:center;">
-            <span data-lang="es">Cotizar Evento</span>
-            <span data-lang="en">Quote Event</span>
-            <span data-lang="pt">Cotar Evento</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROADMAP -->
+    <!-- 4. ROADMAP 2027 -->
     <section class="kit-section">
       <h2>
-        <span data-lang="es">Hoja de Ruta de Expansión 2026–2027</span>
-        <span data-lang="en">2026–2027 Expansion Roadmap</span>
-        <span data-lang="pt">Roteiro de Expansão 2026–2027</span>
+        <span data-lang="es">4. Hoja de Ruta y Lanzamiento (2027)</span>
+        <span data-lang="en">4. Roadmap & Launch Schedule (2027)</span>
+        <span data-lang="pt">4. Roteiro e Lançamento (2027)</span>
       </h2>
+      <p>
+        <span data-lang="es">El despliegue técnico de Punto Para Campeonato está estructurado en hitos inmediatos para la temporada 2027, permitiendo a los patrocinadores fundadores asegurar presencia exclusiva desde el primer día:</span>
+        <span data-lang="en">Punto Para Campeonato's technical rollout is structured around immediate milestones for the 2027 season, enabling founding sponsors to secure exclusive presence from day one:</span>
+        <span data-lang="pt">A implantação técnica do Punto Para Campeonato está estruturada em marcos imediatos para a temporada 2027, permitindo aos patrocinadores fundadores garantir presença exclusiva desde o primeiro dia:</span>
+      </p>
+
       <div class="roadmap-grid">
-        <div class="road-step">
-          <div class="road-date">Q4 2026</div>
-          <h4>
-            <span data-lang="es">Consolidación Beta & Directorio</span>
-            <span data-lang="en">Beta & Directory Consolidation</span>
-            <span data-lang="pt">Consolidação Beta e Diretório</span>
-          </h4>
-          <p>
-            <span data-lang="es">Validación en torneos reales, optimización de rendimiento y expansión a +600 entidades en América.</span>
-            <span data-lang="en">Live tournament validation, performance tuning, and expansion to 600+ entities across the Americas.</span>
-            <span data-lang="pt">Validação em torneios reais, otimização de desempenho e expansão para +600 entidades nas Américas.</span>
-          </p>
-        </div>
-
-        <div class="road-step">
+        <div class="road-step featured">
           <div class="road-date">Enero / Jan 2027</div>
           <h4>
-            <span data-lang="es">Lanzamiento Público Android</span>
-            <span data-lang="en">Android Public Launch</span>
-            <span data-lang="pt">Lançamento Público Android</span>
+            <span data-lang="es">Lanzamiento Android</span>
+            <span data-lang="en">Android Launch</span>
+            <span data-lang="pt">Lançamento Android</span>
           </h4>
           <p>
-            <span data-lang="es">Apertura global en Google Play Store con campaña continental junto a clubes y federaciones aliadas.</span>
-            <span data-lang="en">Global release on Google Play Store backed by a continental campaign with partner clubs and federations.</span>
-            <span data-lang="pt">Lançamento global na Google Play Store com campanha continental junto a clubes e federações parceiras.</span>
+            <span data-lang="es">Publicación oficial en Google Play Store (sistema operativo predominante en Latinoamérica) con directorio continental de clubes, calendario Q1 y espacios de patrocinio activos.</span>
+            <span data-lang="en">Official release on Google Play Store (the dominant OS in Latin America) featuring the continental club directory, Q1 calendar, and active sponsorship placements.</span>
+            <span data-lang="pt">Publicação oficial na Google Play Store (sistema operacional predominante na América Latina) com diretório continental de clubes, calendário Q1 e espaços de patrocínio ativos.</span>
           </p>
         </div>
 
         <div class="road-step">
           <div class="road-date">Q1 2027</div>
           <h4>
-            <span data-lang="es">Despliegue Oficial en iOS</span>
-            <span data-lang="en">Official iOS Rollout</span>
-            <span data-lang="pt">Lançamento Oficial no iOS</span>
+            <span data-lang="es">Lanzamiento iOS</span>
+            <span data-lang="en">iOS Launch</span>
+            <span data-lang="pt">Lançamento iOS</span>
           </h4>
           <p>
-            <span data-lang="es">Disponibilidad completa en Apple App Store para iPhone y iPad, cubriendo el 100% del mercado móvil.</span>
-            <span data-lang="en">Full availability on the Apple App Store for iPhone and iPad, covering 100% of the mobile market.</span>
-            <span data-lang="pt">Disponibilidade completa na Apple App Store para iPhone e iPad, cobrindo 100% do mercado móvel.</span>
+            <span data-lang="es">Disponibilidad completa en Apple App Store para iPhone y iPad, ampliando la cobertura en Norteamérica y el segmento ejecutivo/competitivo de toda la región.</span>
+            <span data-lang="en">Full availability on the Apple App Store for iPhone and iPad, expanding reach across North America and the competitive/executive segment region-wide.</span>
+            <span data-lang="pt">Disponibilidade completa na Apple App Store para iPhone e iPad, ampliando a cobertura na América do Norte e no segmento executivo/competitivo de toda a região.</span>
           </p>
         </div>
+
+        <div class="road-step">
+          <div class="road-date">Q2–Q4 2027</div>
+          <h4>
+            <span data-lang="es">Expansión Regional</span>
+            <span data-lang="en">Regional Expansion</span>
+            <span data-lang="pt">Expansão Regional</span>
+          </h4>
+          <p>
+            <span data-lang="es">Integración de cobertura en vivo de campeonatos continentales, notificaciones segmentadas por país y alianzas con distribuidores oficiales por territorio.</span>
+            <span data-lang="en">Integration of live coverage for continental championships, country-targeted push notifications, and partnerships with official territorial distributors.</span>
+            <span data-lang="pt">Integração de cobertura ao vivo de campeonatos continentais, notificações segmentadas por país e parcerias com distribuidores oficiais por território.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SPONSORSHIP FORMATS -->
+    <section id="formatos" class="kit-section">
+      <h2>
+        <span data-lang="es">5. Formatos de Patrocinio y Visibilidad</span>
+        <span data-lang="en">5. Sponsorship Formats & Visibility</span>
+        <span data-lang="pt">5. Formatos de Patrocínio e Visibilidade</span>
+      </h2>
+      <p>
+        <span data-lang="es">Ofrecemos esquemas flexibles adaptados tanto a marcas fabricantes globales como a distribuidores regionales en América:</span>
+        <span data-lang="en">We offer flexible sponsorship tiers tailored for both global equipment manufacturers and regional distributors across the Americas:</span>
+        <span data-lang="pt">Oferecemos formatos flexíveis adaptados tanto para fabricantes globais quanto para distribuidores regionais nas Américas:</span>
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <span data-lang="es">Espacio / Formato</span>
+                <span data-lang="en">Placement / Format</span>
+                <span data-lang="pt">Espaço / Formato</span>
+              </th>
+              <th>
+                <span data-lang="es">Descripción de la Ubicación</span>
+                <span data-lang="en">Placement Description</span>
+                <span data-lang="pt">Descrição da Localização</span>
+              </th>
+              <th>
+                <span data-lang="es">Nivel de Exposición</span>
+                <span data-lang="en">Exposure Level</span>
+                <span data-lang="pt">Nível de Exposição</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Main Partner (Pantalla de Inicio)</strong></td>
+              <td>
+                <span data-lang="es">Presencia destacada en el banner superior de la pantalla principal y mención como patrocinador oficial de lanzamiento.</span>
+                <span data-lang="en">Featured placement in the top banner on the home screen plus recognition as an official launch partner.</span>
+                <span data-lang="pt">Presença em destaque no banner superior da tela inicial e menção como patrocinador oficial de lançamento.</span>
+              </td>
+              <td><span class="badge-inline gold">100% sesiones activas</span></td>
+            </tr>
+            <tr>
+              <td><strong>Sponsor de Sección Calendario & Torneos</strong></td>
+              <td>
+                <span data-lang="es">Integración visual en la consulta de torneos nacionales e internacionales, llaves en vivo y recordatorios de competencias.</span>
+                <span data-lang="en">Visual integration across national and international tournament schedules, live brackets, and competition reminders.</span>
+                <span data-lang="pt">Integração visual na consulta de torneios nacionais e internacionais, chaves ao vivo e lembretes de competições.</span>
+              </td>
+              <td><span class="badge-inline">Alta frecuencia semanal</span></td>
+            </tr>
+            <tr>
+              <td><strong>Brand Hub & Distribuidor Destacado por País</strong></td>
+              <td>
+                <span data-lang="es">Ficha verificada con logotipo, catálogo destacado de maderas/gomas, enlace directo a tienda online y contacto WhatsApp por territorio.</span>
+                <span data-lang="en">Verified profile with logo, featured blades/rubbers catalog, direct online store link, and WhatsApp contact by territory.</span>
+                <span data-lang="pt">Ficha verificada com logotipo, catálogo em destaque de raquetes/borrachas, link direto para loja online e WhatsApp por território.</span>
+              </td>
+              <td><span class="badge-inline">Conversión directa</span></td>
+            </tr>
+            <tr>
+              <td><strong>Notificaciones Push & Lanzamientos</strong></td>
+              <td>
+                <span data-lang="es">Envío segmentado por país para anunciar nuevas gomas, maderas, pelotas oficiales, promociones de temporada y cobertura en @puntoparacampeonato.</span>
+                <span data-lang="en">Country-targeted push alerts to announce new rubbers, blades, official balls, seasonal promotions, plus social coverage on @puntoparacampeonato.</span>
+                <span data-lang="pt">Envio segmentado por país para anunciar novas borrachas, raquetes, bolas oficiais, promoções de temporada e cobertura no @puntoparacampeonato.</span>
+              </td>
+              <td><span class="badge-inline">Impacto inmediato</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -848,27 +970,27 @@
     <section id="contacto" class="contact-banner">
       <div>
         <h2>
-          <span data-lang="es">Hablemos de tu marca en el tenis de mesa</span>
-          <span data-lang="en">Let's grow your brand in table tennis</span>
-          <span data-lang="pt">Vamos impulsionar sua marca no tênis de mesa</span>
+          <span data-lang="es">Contacto Comercial y Alianzas</span>
+          <span data-lang="en">Commercial Contact & Partnerships</span>
+          <span data-lang="pt">Contato Comercial e Parcerias</span>
         </h2>
         <p>
-          <span data-lang="es">Escríbenos para recibir tarifas actualizadas, métricas detalladas por país o agendar una demostración en vivo de los espacios disponibles.</span>
-          <span data-lang="en">Reach out for updated rate cards, country-by-country audience metrics, or a live walkthrough of available placements.</span>
-          <span data-lang="pt">Entre em contato para receber tabelas atualizadas, métricas por país ou agendar uma demonstração ao vivo dos espaços disponíveis.</span>
+          <span data-lang="es">Proyecto: <strong>Punto Para Campeonato</strong> (Android Enero 2027 | iOS Q1 2027). Escríbenos para reservar espacios de patrocinio fundacional o recibir tarifas por país.</span>
+          <span data-lang="en">Project: <strong>Punto Para Campeonato</strong> (Android Jan 2027 | iOS Q1 2027). Contact us to reserve founding sponsorship placements or request country rate cards.</span>
+          <span data-lang="pt">Projeto: <strong>Punto Para Campeonato</strong> (Android Jan 2027 | iOS Q1 2027). Entre em contato para reservar espaços de patrocínio fundador ou receber tabelas por país.</span>
         </p>
       </div>
       <div class="contact-details">
-        <div><strong>Email:</strong> <a href="mailto:info@ppctt.app">info@ppctt.app</a></div>
+        <div><strong>Email:</strong> <a href="mailto:dgbrownjr3@gmail.com">dgbrownjr3@gmail.com</a></div>
+        <div><strong>WhatsApp:</strong> <a href="https://wa.me/50762606718" target="_blank" rel="noopener">+507 6260-6718</a></div>
         <div><strong>Instagram:</strong> <a href="https://instagram.com/puntoparacampeonato" target="_blank" rel="noopener">@puntoparacampeonato</a></div>
         <div><strong>Web:</strong> <a href="https://ppctt.app">https://ppctt.app</a></div>
-        <div><strong>WhatsApp:</strong> <a href="https://wa.me/50762606718" target="_blank" rel="noopener">+507 6260-6718</a></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div>© 2026 Punto Para Campeonato (PPCTT) — Panamá</div>
+    <div>© 2026–2027 Punto Para Campeonato (PPCTT) — Panamá</div>
     <div class="footer-links">
       <a href="/">Inicio</a>
       <a href="/manual">Manual</a>
