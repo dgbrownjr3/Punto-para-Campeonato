@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manual de Usuario — Punto Para Campeonato (PPCTT)</title>
+  <meta name="description" content="Guía oficial de uso de Punto Para Campeonato para jugadores, clubes, asociaciones y moderadores de tenis de mesa en América." />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <style>
+    :root {
+      --bg: #070d19;
+      --surface: #111b2e;
+      --surface-alt: #16233b;
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.14);
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --red: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding-bottom: 4rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(7, 13, 25, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      object-fit: cover;
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 0.35rem;
+      background: var(--surface);
+      padding: 0.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.82rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #04101f;
+    }
+
+    /* Main Layout */
+    main {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 0;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--surface) 0%, #0d172a 100%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 1rem;
+    }
+
+    /* Quick TOC */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .toc-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .toc-grid a {
+      display: block;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.85rem;
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: border-color 0.2s;
+    }
+
+    .toc-grid a:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Sections */
+    section.guide-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    section.guide-section h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #ffffff;
+    }
+
+    section.guide-section h3 {
+      font-size: 1.05rem;
+      margin: 1.25rem 0 0.5rem;
+      color: var(--accent);
+    }
+
+    section.guide-section p {
+      color: #cbd5e1;
+      margin-bottom: 0.85rem;
+    }
+
+    ul, ol {
+      padding-left: 1.35rem;
+      color: #cbd5e1;
+      margin-bottom: 0.85rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    li strong {
+      color: #ffffff;
+    }
+
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .role-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem;
+    }
+
+    .role-card h4 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: #fff;
+    }
+
+    .role-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .callout {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 0.9rem 1.1rem;
+      border-radius: 0 10px 10px 0;
+      margin-top: 1rem;
+      font-size: 0.92rem;
+      color: #e2e8f0;
+    }
+
+    footer {
+      max-width: 1020px;
+      margin: 2.5rem auto 0;
+      padding: 1.5rem 1.25rem 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    /* Language visibility */
+    [data-lang] {
+      display: none;
+    }
+
+    body.lang-es [data-lang="es"],
+    body.lang-en [data-lang="en"],
+    body.lang-pt [data-lang="pt"] {
+      display: block;
+    }
+
+    span[data-lang] {
+      display: none;
+    }
+
+    body.lang-es span[data-lang="es"],
+    body.lang-en span[data-lang="en"],
+    body.lang-pt span[data-lang="pt"] {
+      display: inline;
+    }
+  </style>
+</head>
+<body class="lang-es">
+
+  <header>
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <img src="/logo.png" alt="Punto Para Campeonato" />
+        <span>Punto Para Campeonato</span>
+      </a>
+      <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('pt')">PT</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="badge">
+        <span data-lang="es">Documentación Oficial • Versión 1.0</span>
+        <span data-lang="en">Official Documentation • Version 1.0</span>
+        <span data-lang="pt">Documentação Oficial • Versão 1.0</span>
+      </div>
+      <h1>
+        <span data-lang="es">Manual de Usuario</span>
+        <span data-lang="en">User Manual</span>
+        <span data-lang="pt">Manual do Usuário</span>
+      </h1>
+      <p>
+        <span data-lang="es">Guía completa para jugadores, clubes, asociaciones, federaciones y moderadores sobre cómo aprovechar todas las herramientas de Punto Para Campeonato en América.</span>
+        <span data-lang="en">Complete guide for players, clubs, associations, federations, and moderators on how to make the most of Punto Para Campeonato across the Americas.</span>
+        <span data-lang="pt">Guia completo para jogadores, clubes, associações, federações e moderadores sobre como aproveitar todas as ferramentas do Punto Para Campeonato nas Américas.</span>
+      </p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <nav class="toc" aria-label="Índice">
+      <div class="toc-title">
+        <span data-lang="es">Contenido del Manual</span>
+        <span data-lang="en">Manual Contents</span>
+        <span data-lang="pt">Conteúdo do Manual</span>
+      </div>
+      <div class="toc-grid">
+        <a href="#inicio">
+          <span data-lang="es">1. Primeros Pasos y Perfil</span>
+          <span data-lang="en">1. Getting Started & Profile</span>
+          <span data-lang="pt">1. Primeiros Passos e Perfil</span>
+        </a>
+        <a href="#roles">
+          <span data-lang="es">2. Roles de la Plataforma</span>
+          <span data-lang="en">2. Platform Roles</span>
+          <span data-lang="pt">2. Perfis da Plataforma</span>
+        </a>
+        <a href="#torneos">
+          <span data-lang="es">3. Torneos y Llaves</span>
+          <span data-lang="en">3. Tournaments & Brackets</span>
+          <span data-lang="pt">3. Torneios e Chaves</span>
+        </a>
+        <a href="#directorio">
+          <span data-lang="es">4. Directorio Continental</span>
+          <span data-lang="en">4. Continental Directory</span>
+          <span data-lang="pt">4. Diretório Continental</span>
+        </a>
+        <a href="#comunidad">
+          <span data-lang="es">5. Noticias, Foro y Galería</span>
+          <span data-lang="en">5. News, Forum & Gallery</span>
+          <span data-lang="pt">5. Notícias, Fórum e Galeria</span>
+        </a>
+        <a href="#cuenta">
+          <span data-lang="es">6. Privacidad y Cuenta</span>
+          <span data-lang="en">6. Privacy & Account</span>
+          <span data-lang="pt">6. Privacidade e Conta</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section id="inicio" class="guide-section">
+      <h2>
+        <span data-lang="es">1. Primeros Pasos y Configuración de Perfil</span>
+        <span data-lang="en">1. Getting Started & Profile Setup</span>
+        <span data-lang="pt">1. Primeiros Passos e Configuração de Perfil</span>
+      </h2>
+      <div data-lang="es">
+        <p>Punto Para Campeonato está diseñada para funcionar de forma rápida y con bajo consumo de datos en cualquier dispositivo móvil.</p>
+        <ol>
+          <li><strong>Registro e Inicio de Sesión:</strong> Puedes explorar noticias, marcadores en vivo y el directorio como invitado, o iniciar sesión con tu correo electrónico o cuenta de Google para participar en torneos, publicar en el foro y guardar tu progreso.</li>
+          <li><strong>Idioma de la Aplicación:</strong> En la pantalla de <em>Información / Configuración</em> puedes alternar en cualquier momento entre <strong>Español, Inglés y Portugués</strong>.</li>
+          <li><strong>Perfil de Jugador:</strong> Completa tu país, club de origen, categoría y estilo de juego para facilitar tu inscripción en eventos y tu identificación dentro de la comunidad.</li>
+        </ol>
+      </div>
+      <div data-lang="en">
+        <p>Punto Para Campeonato is built for fast performance and low mobile data usage across all devices.</p>
+        <ol>
+          <li><strong>Sign Up & Login:</strong> Browse news, live tickers, and the directory as a guest, or sign in with your email or Google account to join tournaments, post in the forum, and sync your profile.</li>
+          <li><strong>App Language:</strong> Switch anytime between <strong>Spanish, English, and Portuguese</strong> inside the <em>Information / Settings</em> screen.</li>
+          <li><strong>Player Profile:</strong> Set your country, home club, division, and playing style to streamline event registration and community recognition.</li>
+        </ol>
+      </div>
+      <div data-lang="pt">
+        <p>O Punto Para Campeonato foi projetado para funcionar com rapidez e baixo consumo de dados móveis.</p>
+        <ol>
+          <li><strong>Cadastro e Login:</strong> Explore notícias, placares ao vivo e o diretório como visitante, ou entre com seu e-mail ou conta Google para participar de torneios e publicar no fórum.</li>
+          <li><strong>Idioma do Aplicativo:</strong> Na tela de <em>Informações / Configurações</em>, alterne a qualquer momento entre <strong>Espanhol, Inglês e Português</strong>.</li>
+          <li><strong>Perfil do Jogador:</strong> Preencha seu país, clube, categoria e estilo de jogo para facilitar sua inscrição em eventos.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="roles" class="guide-section">
+      <h2>
+        <span data-lang="es">2. Roles dentro de la Plataforma</span>
+        <span data-lang="en">2. Platform Roles</span>
+        <span data-lang="pt">2. Perfis na Plataforma</span>
+      </h2>
+      <div class="role-grid">
+        <div class="role-card">
+          <h4>
+            <span data-lang="es">🏓 Jugadores y Aficionados</span>
+            <span data-lang="en">🏓 Players & Fans</span>
+            <span data-lang="pt">🏓 Jogadores e Fãs</span>
+          </h4>
+          <p>
+            <span data-lang="es">Siguen resultados en tiempo real, consultan cuadros de torneos, buscan clubes en toda América, participan en el foro y disfrutan del minijuego 2.5D.</span>
+            <span data-lang="en">Follow real-time scores, check tournament brackets, search clubs across the Americas, join forum discussions, and play the 2.5D minigame.</span>
+            <span data-lang="pt">Acompanham resultados em tempo real, consultam chaves de torneios, buscam clubes nas Américas, participam do fórum e jogam o minijogo 2.5D.</span>
+          </p>
+        </div>
+        <div class="role-card">
+          <h4>
+            <span data-lang="es">🏢 Clubes y Academias</span>
+            <span data-lang="en">🏢 Clubs & Academies</span>
+            <span data-lang="pt">🏢 Clubes e Academias</span>
+          </h4>
+          <p>
+            <span data-lang="es">Gestionan su ficha oficial en el Directorio Continental con ubicación, horarios, redes sociales y contacto directo para nuevos alumnos y visitantes.</span>
+            <span data-lang="en">Manage their official listing in the Continental Directory with location, schedules, social links, and contact info for new players and visitors.</span>
+            <span data-lang="pt">Gerenciam sua ficha oficial no Diretório Continental com localização, horários, redes sociais e contato direto para novos alunos e visitantes.</span>
+          </p>
+        </div>
+        <div class="role-card">
+          <h4>
+            <span data-lang="es">🏆 Asociaciones y Organizadores</span>
+            <span data-lang="en">🏆 Associations & Organizers</span>
+            <span data-lang="pt">🏆 Associações e Organizadores</span>
+          </h4>
+          <p>
+            <span data-lang="es">Crean y administran torneos con formato de Grupos + Llave Final, actualizan marcadores en vivo y difunden convocatorias oficiales.</span>
+            <span data-lang="en">Create and manage tournaments using Groups + Knockout Bracket formats, update live scores, and publish official event announcements.</span>
+            <span data-lang="pt">Criam e administram torneios no formato Grupos + Chave Final, atualizam placares ao vivo e divulgam convocações oficiais.</span>
+          </p>
+        </div>
+        <div class="role-card">
+          <h4>
+            <span data-lang="es">🛡️ Moderadores y Administradores</span>
+            <span data-lang="en">🛡️ Moderators & Admins</span>
+            <span data-lang="pt">🛡️ Moderadores e Administradores</span>
+          </h4>
+          <p>
+            <span data-lang="es">Verifican nuevas entidades sugeridas en el directorio, aprueban álbumes fotográficos, moderan el foro comunitario y validan noticias oficiales.</span>
+            <span data-lang="en">Verify newly submitted directory entities, approve photo albums, moderate the community forum, and validate official news feeds.</span>
+            <span data-lang="pt">Verificam novas entidades sugeridas no diretório, aprovam álbuns de fotos, moderam o fórum comunitário e validam notícias oficiais.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="torneos" class="guide-section">
+      <h2>
+        <span data-lang="es">3. Gestión de Torneos, Grupos y Llaves</span>
+        <span data-lang="en">3. Tournaments, Groups & Brackets</span>
+        <span data-lang="pt">3. Gestão de Torneios, Grupos e Chaves</span>
+      </h2>
+      <div data-lang="es">
+        <p>El motor de competencias soporta eventos locales, nacionales y continentales:</p>
+        <ul>
+          <li><strong>Marcador en Vivo (Live Ticker):</strong> En la pantalla principal puedes ver los partidos activos, sets ganados y resultados recientes actualizados al instante.</li>
+          <li><strong>Formato Grupos + Llave Final:</strong> Consulta las tablas de posiciones por grupo (puntos, partidos ganados/perdidos, diferencia de sets) y el avance automático hacia octavos, cuartos, semifinales y final.</li>
+          <li><strong>Control de Mesa / Árbitro:</strong> Los organizadores autorizados pueden registrar el puntaje set por set desde su dispositivo móvil durante el desarrollo del encuentro.</li>
+        </ul>
+      </div>
+      <div data-lang="en">
+        <p>The competition engine supports local, national, and continental events:</p>
+        <ul>
+          <li><strong>Live Match Ticker:</strong> View active matches, set scores, and recent results updated in real time right from the home screen.</li>
+          <li><strong>Groups + Knockout Bracket Format:</strong> Track group standings (points, match record, set differential) and automatic progression into Round of 16, Quarterfinals, Semifinals, and Finals.</li>
+          <li><strong>Table / Umpire Scoring:</strong> Authorized organizers can log scores set-by-set directly from their mobile device during play.</li>
+        </ul>
+      </div>
+      <div data-lang="pt">
+        <p>O sistema de competições suporta eventos locais, nacionais e continentais:</p>
+        <ul>
+          <li><strong>Placar ao Vivo (Live Ticker):</strong> Na tela inicial, acompanhe partidas em andamento, sets vencidos e resultados recentes em tempo real.</li>
+          <li><strong>Formato Grupos + Chave Final:</strong> Consulte a classificação dos grupos (pontos, vitórias/derrotas, saldo de sets) e o avanço automático para as fases eliminatórias.</li>
+          <li><strong>Controle de Mesa / Árbitro:</strong> Organizadores autorizados podem registrar a pontuação set a set pelo celular durante a partida.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="directorio" class="guide-section">
+      <h2>
+        <span data-lang="es">4. Directorio Continental de América</span>
+        <span data-lang="en">4. Continental Directory of the Americas</span>
+        <span data-lang="pt">4. Diretório Continental das Américas</span>
+      </h2>
+      <div data-lang="es">
+        <p>Reúne federaciones nacionales, asociaciones estatales/provinciales, ligas, clubes y creadores de contenido de todo el continente.</p>
+        <ul>
+          <li><strong>Filtros Inteligentes:</strong> Filtra por país, ciudad o categoría (Federación Nacional, Asociación Regional, Club / Academia, Liga Profesional, Medio / Creador).</li>
+          <li><strong>Agregar una Entidad:</strong> Cualquier usuario registrado puede pulsar el botón <strong>"Agregar entidad"</strong> para registrar un club o asociación nueva. Un moderador revisará los datos antes de su verificación definitiva.</li>
+          <li><strong>Contacto Directo:</strong> Cada ficha incluye enlaces rápidos a sitio web, Instagram, Facebook, correo electrónico y teléfono cuando estén disponibles.</li>
+        </ul>
+      </div>
+      <div data-lang="en">
+        <p>Brings together national federations, state/provincial associations, leagues, clubs, and content creators across the Americas.</p>
+        <ul>
+          <li><strong>Smart Filters:</strong> Filter by country, city, or category (National Federation, Regional Association, Club / Academy, Professional League, Media / Creator).</li>
+          <li><strong>Add an Entity:</strong> Any registered user can tap <strong>"Add Entity"</strong> to submit a new club or association. A moderator will review the submission for official verification.</li>
+          <li><strong>Direct Contact:</strong> Each profile provides one-tap links to website, Instagram, Facebook, email, and phone when available.</li>
+        </ul>
+      </div>
+      <div data-lang="pt">
+        <p>Reúne federações nacionais, associações estaduais/provinciais, ligas, clubes e criadores de conteúdo de todo o continente.</p>
+        <ul>
+          <li><strong>Filtros Inteligentes:</strong> Filtre por país, cidade ou categoria (Federação Nacional, Associação Regional, Clube / Academia, Liga Profissional, Mídia / Criador).</li>
+          <li><strong>Adicionar Entidade:</strong> Qualquer usuário cadastrado pode tocar em <strong>"Adicionar entidade"</strong> para cadastrar um novo clube ou associação para revisão dos moderadores.</li>
+          <li><strong>Contato Direto:</strong> Cada ficha inclui atalhos para site, Instagram, Facebook, e-mail e telefone quando disponíveis.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="comunidad" class="guide-section">
+      <h2>
+        <span data-lang="es">5. Noticias, Foro Comunitario, Galería y Brand Hubs</span>
+        <span data-lang="en">5. News, Community Forum, Gallery & Brand Hubs</span>
+        <span data-lang="pt">5. Notícias, Fórum Comunitário, Galeria e Brand Hubs</span>
+      </h2>
+      <div data-lang="es">
+        <ul>
+          <li><strong>Noticias:</strong> Cobertura actualizada de circuitos ITTF, WTT, eventos panamericanos y torneos regionales.</li>
+          <li><strong>Foro Comunitario:</strong> Espacio para debatir sobre equipamiento (maderas, gomas, pelotas), técnica, reglamentos y compra/venta local.</li>
+          <li><strong>Galería Fotográfica:</strong> Álbumes organizados por evento con los últimos álbumes actualizados siempre visibles en primer lugar.</li>
+          <li><strong>Brand Hubs y Minijuego 2.5D:</strong> Explora catálogos de marcas especializadas en tenis de mesa y pon a prueba tus reflejos en el minijuego integrado.</li>
+        </ul>
+        <div class="callout">
+          <strong>Normas de convivencia:</strong> Mantén siempre un trato respetuoso hacia jugadores, árbitros y organizaciones. El contenido ofensivo o spam será retirado por el equipo de moderación.
+        </div>
+      </div>
+      <div data-lang="en">
+        <ul>
+          <li><strong>News Feed:</strong> Up-to-date coverage of ITTF, WTT, Pan-American circuits, and regional tournaments.</li>
+          <li><strong>Community Forum:</strong> Discuss equipment (blades, rubbers, balls), technique, rules, and local gear exchange.</li>
+          <li><strong>Photo Gallery:</strong> Event photo albums sorted automatically with the most recently updated albums first.</li>
+          <li><strong>Brand Hubs & 2.5D Minigame:</strong> Explore table tennis equipment brands and test your reflexes in the built-in 2.5D ping pong game.</li>
+        </ul>
+        <div class="callout">
+          <strong>Community Guidelines:</strong> Always treat players, umpires, and organizations with respect. Abusive content or spam will be removed by moderators.
+        </div>
+      </div>
+      <div data-lang="pt">
+        <ul>
+          <li><strong>Notícias:</strong> Cobertura atualizada dos circuitos ITTF, WTT, eventos pan-americanos e torneios regionais.</li>
+          <li><strong>Fórum Comunitário:</strong> Espaço para debater sobre equipamentos (raquetes, borrachas, bolas), técnica e regras.</li>
+          <li><strong>Galeria de Fotos:</strong> Álbuns organizados por evento, exibindo sempre os álbuns atualizados mais recentemente primeiro.</li>
+          <li><strong>Brand Hubs e Minijogo 2.5D:</strong> Explore marcas especializadas em tênis de mesa e teste seus reflexos no minijogo integrado.</li>
+        </ul>
+        <div class="callout">
+          <strong>Regras de convivência:</strong> Mantenha sempre o respeito com jogadores, árbitros e organizações. Conteúdo ofensivo ou spam será removido pela moderação.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="cuenta" class="guide-section">
+      <h2>
+        <span data-lang="es">6. Seguridad, Privacidad y Eliminación de Cuenta</span>
+        <span data-lang="en">6. Security, Privacy & Account Deletion</span>
+        <span data-lang="pt">6. Segurança, Privacidade e Exclusão de Conta</span>
+      </h2>
+      <div data-lang="es">
+        <p>Tu privacidad y el control sobre tus datos están garantizados en todo momento:</p>
+        <ul>
+          <li><strong>Gestión de Datos:</strong> Puedes consultar nuestra <a href="/privacy">Política de Privacidad</a> y los <a href="/terms">Términos y Condiciones de Uso</a> en cualquier momento.</li>
+          <li><strong>Eliminación Definitiva de Cuenta:</strong> Si deseas eliminar tu cuenta y tus datos personales asociados, puedes solicitarlo directamente desde la sección <em>Documentación y Marco Legal → Eliminación de Cuenta y Datos</em> en la app o en <a href="/privacy#delete-account">ppctt.app/privacy#delete-account</a>.</li>
+          <li><strong>Soporte Técnico:</strong> Para asistencia con torneos, verificación de clubes o reportes técnicos, visita <a href="/support">ppctt.app/support</a>.</li>
+        </ul>
+      </div>
+      <div data-lang="en">
+        <p>Your privacy and control over your personal data are protected at all times:</p>
+        <ul>
+          <li><strong>Data Management:</strong> Review our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms and Conditions</a> anytime.</li>
+          <li><strong>Permanent Account Deletion:</strong> If you wish to delete your account and associated personal data, request it via <em>Documentation & Legal → Account and Data Deletion</em> in the app or at <a href="/privacy#delete-account">ppctt.app/privacy#delete-account</a>.</li>
+          <li><strong>Technical Support:</strong> For help with tournaments, club verification, or bug reports, visit <a href="/support">ppctt.app/support</a>.</li>
+        </ul>
+      </div>
+      <div data-lang="pt">
+        <p>Sua privacidade e o controle sobre seus dados são garantidos a todo momento:</p>
+        <ul>
+          <li><strong>Gestão de Dados:</strong> Consulte nossa <a href="/privacy">Política de Privacidade</a> e os <a href="/terms">Termos e Condições de Uso</a> a qualquer momento.</li>
+          <li><strong>Exclusão Definitiva de Conta:</strong> Se desejar excluir sua conta e dados pessoais associados, solicite em <em>Documentação e Marco Legal → Exclusão de Conta e Dados</em> no app ou em <a href="/privacy#delete-account">ppctt.app/privacy#delete-account</a>.</li>
+          <li><strong>Suporte Técnico:</strong> Para ajuda com torneios, verificação de clubes ou suporte técnico, acesse <a href="/support">ppctt.app/support</a>.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 Punto Para Campeonato (PPCTT)</div>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/privacy">Privacidad</a>
+      <a href="/terms">Términos</a>
+      <a href="/support">Soporte</a>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
